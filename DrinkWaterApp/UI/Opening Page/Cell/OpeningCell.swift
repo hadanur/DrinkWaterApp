@@ -15,17 +15,24 @@ class OpeningCell: UITableViewCell {
     @IBOutlet private weak var weightTextfield: UITextField!
     
     var heightPickerView = UIPickerView()
+    var weightPickerView = UIPickerView()
     
-    let height = [140...220]
-    
+    let height = [0,1,2,3]
+    let weight = [6,7,8]
     
     func configure() {
         
         heightTextfield.inputView = heightPickerView
         heightTextfield.textAlignment = .center
         
+        weightTextfield.inputView = weightPickerView
+        weightTextfield.textAlignment = .center
+        
         heightPickerView.delegate = self
         heightPickerView.dataSource = self
+        
+        weightPickerView.delegate = self
+        weightPickerView.dataSource = self
     }
     
 }
@@ -36,7 +43,11 @@ extension OpeningCell: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        height.count
+        if heightTextfield.isSelected == true {
+          return height.count
+        } else {
+           return weight.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

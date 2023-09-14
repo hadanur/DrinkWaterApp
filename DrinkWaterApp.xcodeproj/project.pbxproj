@@ -25,6 +25,16 @@
 		B70145F42AAF50E000BDD00B /* SetupProfilePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70145F22AAF50E000BDD00B /* SetupProfilePageVC.xib */; };
 		B70145F72AAF511A00BDD00B /* SetupProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70145F62AAF511A00BDD00B /* SetupProfileCell.swift */; };
 		B70145F92AAF513300BDD00B /* SetupProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70145F82AAF513300BDD00B /* SetupProfileCell.xib */; };
+		B7657EDE2AB044AA004300CB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EDD2AB044AA004300CB /* CoreDataManager.swift */; };
+		B7657EE12AB044CC004300CB /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE02AB044CC004300CB /* ProfileModel.swift */; };
+		B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE32AB04683004300CB /* ProfileVC.swift */; };
+		B7657EE62AB04683004300CB /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EE42AB04683004300CB /* ProfileVC.xib */; };
+		B7657EE92AB055F6004300CB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE82AB055F6004300CB /* ProfileCell.swift */; };
+		B7657EEB2AB055FE004300CB /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEA2AB055FE004300CB /* ProfileCell.xib */; };
+		B7657EEF2AB05822004300CB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EED2AB05822004300CB /* SettingsVC.swift */; };
+		B7657EF02AB05822004300CB /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEE2AB05822004300CB /* SettingsVC.xib */; };
+		B7EA9D8D2AB2F61A00727675 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EA9D8C2AB2F61A00727675 /* SettingsCell.swift */; };
+		B7EA9D8F2AB2F62500727675 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EA9D8E2AB2F62500727675 /* SettingsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +58,16 @@
 		B70145F22AAF50E000BDD00B /* SetupProfilePageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupProfilePageVC.xib; sourceTree = "<group>"; };
 		B70145F62AAF511A00BDD00B /* SetupProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileCell.swift; sourceTree = "<group>"; };
 		B70145F82AAF513300BDD00B /* SetupProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupProfileCell.xib; sourceTree = "<group>"; };
+		B7657EDD2AB044AA004300CB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B7657EE02AB044CC004300CB /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		B7657EE32AB04683004300CB /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		B7657EE42AB04683004300CB /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		B7657EE82AB055F6004300CB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		B7657EEA2AB055FE004300CB /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		B7657EED2AB05822004300CB /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		B7657EEE2AB05822004300CB /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		B7EA9D8C2AB2F61A00727675 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		B7EA9D8E2AB2F62500727675 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +100,8 @@
 		B70145BD2AAF305F00BDD00B /* DrinkWaterApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7657EDF2AB044BD004300CB /* Model */,
+				B7657EDC2AB04497004300CB /* Utils */,
 				B70145D72AAF312900BDD00B /* Assets */,
 				B70145D62AAF312400BDD00B /* App */,
 				B70145D52AAF311E00BDD00B /* UI */,
@@ -91,6 +113,8 @@
 		B70145D52AAF311E00BDD00B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B7657EEC2AB057D4004300CB /* Settings Page */,
+				B7657EE22AB0466D004300CB /* Profile Page */,
 				B70145E62AAF432300BDD00B /* Opening Page */,
 				B70145D82AAF314900BDD00B /* Home Page */,
 				B70145CC2AAF306000BDD00B /* LaunchScreen.storyboard */,
@@ -175,6 +199,60 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B7657EDC2AB04497004300CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B7657EDD2AB044AA004300CB /* CoreDataManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B7657EDF2AB044BD004300CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7657EE02AB044CC004300CB /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7657EE22AB0466D004300CB /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				B7657EE72AB055E7004300CB /* Cell */,
+				B7657EE32AB04683004300CB /* ProfileVC.swift */,
+				B7657EE42AB04683004300CB /* ProfileVC.xib */,
+			);
+			path = "Profile Page";
+			sourceTree = "<group>";
+		};
+		B7657EE72AB055E7004300CB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B7657EE82AB055F6004300CB /* ProfileCell.swift */,
+				B7657EEA2AB055FE004300CB /* ProfileCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B7657EEC2AB057D4004300CB /* Settings Page */ = {
+			isa = PBXGroup;
+			children = (
+				B7657EF12AB0586A004300CB /* Cell */,
+				B7657EED2AB05822004300CB /* SettingsVC.swift */,
+				B7657EEE2AB05822004300CB /* SettingsVC.xib */,
+			);
+			path = "Settings Page";
+			sourceTree = "<group>";
+		};
+		B7657EF12AB0586A004300CB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B7EA9D8C2AB2F61A00727675 /* SettingsCell.swift */,
+				B7EA9D8E2AB2F62500727675 /* SettingsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,13 +312,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70145EA2AAF434500BDD00B /* OpeningVC.xib in Resources */,
+				B7657EE62AB04683004300CB /* ProfileVC.xib in Resources */,
 				B70145CE2AAF306000BDD00B /* LaunchScreen.storyboard in Resources */,
 				B70145F42AAF50E000BDD00B /* SetupProfilePageVC.xib in Resources */,
+				B7657EF02AB05822004300CB /* SettingsVC.xib in Resources */,
 				B70145EF2AAF438000BDD00B /* OpeningCell.xib in Resources */,
+				B7EA9D8F2AB2F62500727675 /* SettingsCell.xib in Resources */,
 				B70145DC2AAF315600BDD00B /* HomeVC.xib in Resources */,
 				B70145E12AAF3DAE00BDD00B /* HomeCell.xib in Resources */,
 				B70145CB2AAF306000BDD00B /* Assets.xcassets in Resources */,
 				B70145F92AAF513300BDD00B /* SetupProfileCell.xib in Resources */,
+				B7657EEB2AB055FE004300CB /* ProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +336,19 @@
 				B70145BF2AAF305F00BDD00B /* AppDelegate.swift in Sources */,
 				B70145DB2AAF315600BDD00B /* HomeVC.swift in Sources */,
 				B70145C92AAF305F00BDD00B /* DrinkWaterApp.xcdatamodeld in Sources */,
+				B7657EE12AB044CC004300CB /* ProfileModel.swift in Sources */,
 				B70145E52AAF42E800BDD00B /* HomeVM.swift in Sources */,
 				B70145ED2AAF436600BDD00B /* OpeningCell.swift in Sources */,
 				B70145F72AAF511A00BDD00B /* SetupProfileCell.swift in Sources */,
 				B70145C12AAF305F00BDD00B /* SceneDelegate.swift in Sources */,
+				B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */,
 				B70145E92AAF434500BDD00B /* OpeningVC.swift in Sources */,
 				B70145DF2AAF3D8E00BDD00B /* HomeCell.swift in Sources */,
 				B70145F32AAF50E000BDD00B /* SetupProfilePageVC.swift in Sources */,
+				B7657EDE2AB044AA004300CB /* CoreDataManager.swift in Sources */,
+				B7657EE92AB055F6004300CB /* ProfileCell.swift in Sources */,
+				B7EA9D8D2AB2F61A00727675 /* SettingsCell.swift in Sources */,
+				B7657EEF2AB05822004300CB /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
