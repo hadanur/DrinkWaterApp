@@ -17,7 +17,6 @@ class SettingsVC: UIViewController {
         tableView.register(settingsCell, forCellReuseIdentifier: "settingsCell")
     }
 
-
 }
 
 extension SettingsVC {

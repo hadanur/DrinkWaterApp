@@ -18,13 +18,14 @@ class CoreDataManager {
 
     private init() { }
     
-    func saveProfile(name: String, height: Int, weight: Int) -> Bool {
+    func saveProfile(name: String, height: Int, weight: Int, male: Bool) -> Bool {
         let newProfile = NSEntityDescription.insertNewObject(forEntityName: "Profile", into: context)
         
         newProfile.setValue(height, forKey: "height")
         newProfile.setValue(UUID(), forKey: "id")
         newProfile.setValue(weight, forKey: "weight")
         newProfile.setValue(name, forKey: "name")
+        newProfile.setValue(male, forKey: "male")
         do {
             try context.save()
             return true
@@ -44,9 +45,10 @@ class CoreDataManager {
                 if let height = result.value(forKey: "height") as? Int,
                    let weight = result.value(forKey: "weight") as? Int,
                    let id = result.value(forKey: "id") as? UUID,
+                   let male = result.value(forKey: "male") as? Bool,
                    let name = result.value(forKey: "name") as? String {
                     let user = ProfileModel(name: name, height: height,
-                                            weight: weight, id: id)
+                                            weight: weight, id: id, male: male)
                                             
                     profile.append(user)
                 }

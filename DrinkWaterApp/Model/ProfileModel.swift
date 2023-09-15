@@ -13,4 +13,5 @@ struct ProfileModel {
     let height: Int
     let weight: Int
     let id: UUID
+    let male: Bool
 }
