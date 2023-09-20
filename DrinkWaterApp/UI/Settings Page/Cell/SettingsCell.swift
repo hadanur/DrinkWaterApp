@@ -11,7 +11,6 @@ import UIKit
 class SettingsCell: UITableViewCell {
     @IBOutlet private weak var settingsView: UIView!
     
-    
     func configure() {
         
     }

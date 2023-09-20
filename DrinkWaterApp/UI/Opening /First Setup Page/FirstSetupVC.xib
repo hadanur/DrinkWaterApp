@@ -39,7 +39,7 @@
                         <constraint firstAttribute="width" constant="134" id="xil-Sq-TKd"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V8Q-8q-u8b">
@@ -61,11 +61,11 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7a-fe-eUF">
-                    <rect key="frame" x="44" y="628" width="327" height="52"/>
+                    <rect key="frame" x="44" y="670" width="327" height="52"/>
                     <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="327" id="3Sf-oh-eSm"/>
-                        <constraint firstAttribute="height" constant="52" id="ebq-vM-rwk"/>
+                        <constraint firstAttribute="width" constant="327" id="1wC-Je-uFe"/>
+                        <constraint firstAttribute="height" constant="52" id="tnH-iK-Xis"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -86,13 +86,13 @@
                 <constraint firstItem="NUH-y2-Paw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="114" id="CiC-of-Txr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V8Q-8q-u8b" secondAttribute="trailing" constant="70" id="ELs-fX-Lmf"/>
                 <constraint firstItem="sqP-iH-L9G" firstAttribute="top" secondItem="2UK-Ym-Iay" secondAttribute="bottom" constant="50" id="Khh-t3-HoN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f7a-fe-eUF" secondAttribute="bottom" constant="140" id="UTS-Uy-TeT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NUH-y2-Paw" secondAttribute="trailing" constant="104" id="YhE-k9-MYH"/>
-                <constraint firstItem="f7a-fe-eUF" firstAttribute="top" secondItem="V8Q-8q-u8b" secondAttribute="bottom" constant="60" id="b7v-Gp-5h7"/>
-                <constraint firstItem="f7a-fe-eUF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="by1-bx-xcl"/>
+                <constraint firstItem="f7a-fe-eUF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="az6-vF-ECX"/>
                 <constraint firstItem="V8Q-8q-u8b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="dFv-pX-3d4"/>
                 <constraint firstItem="2UK-Ym-Iay" firstAttribute="top" secondItem="NUH-y2-Paw" secondAttribute="bottom" constant="65" id="gJj-Rv-LpP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f7a-fe-eUF" secondAttribute="trailing" constant="43" id="kxR-0v-TNX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sqP-iH-L9G" secondAttribute="trailing" constant="140" id="tBw-H7-2fT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f7a-fe-eUF" secondAttribute="trailing" constant="43" id="ttk-w5-8EV"/>
             </constraints>
             <point key="canvasLocation" x="57.971014492753625" y="20.758928571428569"/>
         </view>

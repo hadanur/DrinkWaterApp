@@ -45,13 +45,20 @@
 		B73EF9072AB490F80027A177 /* LastSetupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73EF9052AB490F80027A177 /* LastSetupVC.xib */; };
 		B73EF9092AB492CA0027A177 /* LastSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EF9082AB492CA0027A177 /* LastSetupVC.swift */; };
 		B7657EDE2AB044AA004300CB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EDD2AB044AA004300CB /* CoreDataManager.swift */; };
-		B7657EE12AB044CC004300CB /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE02AB044CC004300CB /* ProfileModel.swift */; };
+		B7657EE12AB044CC004300CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE02AB044CC004300CB /* User.swift */; };
 		B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE32AB04683004300CB /* ProfileVC.swift */; };
 		B7657EE62AB04683004300CB /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EE42AB04683004300CB /* ProfileVC.xib */; };
 		B7657EE92AB055F6004300CB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE82AB055F6004300CB /* ProfileCell.swift */; };
 		B7657EEB2AB055FE004300CB /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEA2AB055FE004300CB /* ProfileCell.xib */; };
 		B7657EEF2AB05822004300CB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EED2AB05822004300CB /* SettingsVC.swift */; };
 		B7657EF02AB05822004300CB /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEE2AB05822004300CB /* SettingsVC.xib */; };
+		B7AA12D12ABAC6B8000A082A /* FirstSetupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D02ABAC6B8000A082A /* FirstSetupVM.swift */; };
+		B7AA12D32ABACA02000A082A /* FirstSetupVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D22ABACA02000A082A /* FirstSetupVMProtocols.swift */; };
+		B7AA12D62ABAD886000A082A /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D52ABAD886000A082A /* UIViewController + Extensions.swift */; };
+		B7AA12D82ABAFD4A000A082A /* SecondSetupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D72ABAFD4A000A082A /* SecondSetupVM.swift */; };
+		B7AA12DA2ABAFD92000A082A /* SecondSetupVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D92ABAFD92000A082A /* SecondSetupVMProtocols.swift */; };
+		B7AA12DC2ABB0294000A082A /* LastSetupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12DB2ABB0294000A082A /* LastSetupVM.swift */; };
+		B7AA12DE2ABB029D000A082A /* LastSetupVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12DD2ABB029D000A082A /* LastSetupVMProtocols.swift */; };
 		B7EA9D8D2AB2F61A00727675 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EA9D8C2AB2F61A00727675 /* SettingsCell.swift */; };
 		B7EA9D8F2AB2F62500727675 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EA9D8E2AB2F62500727675 /* SettingsCell.xib */; };
 /* End PBXBuildFile section */
@@ -97,13 +104,20 @@
 		B73EF9052AB490F80027A177 /* LastSetupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastSetupVC.xib; sourceTree = "<group>"; };
 		B73EF9082AB492CA0027A177 /* LastSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSetupVC.swift; sourceTree = "<group>"; };
 		B7657EDD2AB044AA004300CB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		B7657EE02AB044CC004300CB /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		B7657EE02AB044CC004300CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7657EE32AB04683004300CB /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		B7657EE42AB04683004300CB /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		B7657EE82AB055F6004300CB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		B7657EEA2AB055FE004300CB /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		B7657EED2AB05822004300CB /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		B7657EEE2AB05822004300CB /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		B7AA12D02ABAC6B8000A082A /* FirstSetupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupVM.swift; sourceTree = "<group>"; };
+		B7AA12D22ABACA02000A082A /* FirstSetupVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupVMProtocols.swift; sourceTree = "<group>"; };
+		B7AA12D52ABAD886000A082A /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		B7AA12D72ABAFD4A000A082A /* SecondSetupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSetupVM.swift; sourceTree = "<group>"; };
+		B7AA12D92ABAFD92000A082A /* SecondSetupVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSetupVMProtocols.swift; sourceTree = "<group>"; };
+		B7AA12DB2ABB0294000A082A /* LastSetupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSetupVM.swift; sourceTree = "<group>"; };
+		B7AA12DD2ABB029D000A082A /* LastSetupVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSetupVMProtocols.swift; sourceTree = "<group>"; };
 		B7EA9D8C2AB2F61A00727675 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		B7EA9D8E2AB2F62500727675 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +152,7 @@
 		B70145BD2AAF305F00BDD00B /* DrinkWaterApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7AA12D42ABAD86D000A082A /* Extensions */,
 				B7657EDF2AB044BD004300CB /* Model */,
 				B7657EDC2AB04497004300CB /* Utils */,
 				B70145D72AAF312900BDD00B /* Assets */,
@@ -213,18 +228,12 @@
 		B70145F02AAF509D00BDD00B /* First Setup Page */ = {
 			isa = PBXGroup;
 			children = (
-				B70145F52AAF510C00BDD00B /* Cell */,
 				B70145F12AAF50E000BDD00B /* FirstSetupVC.swift */,
 				B70145F22AAF50E000BDD00B /* FirstSetupVC.xib */,
+				B7AA12D22ABACA02000A082A /* FirstSetupVMProtocols.swift */,
+				B7AA12D02ABAC6B8000A082A /* FirstSetupVM.swift */,
 			);
 			path = "First Setup Page";
-			sourceTree = "<group>";
-		};
-		B70145F52AAF510C00BDD00B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		B7047FAB2AB4755A0032E5F5 /* Fonts */ = {
@@ -275,6 +284,8 @@
 			children = (
 				B73EF8FF2AB48F8F0027A177 /* SecondSetupVC.swift */,
 				B73EF9002AB48F8F0027A177 /* SecondSetupVC.xib */,
+				B7AA12D72ABAFD4A000A082A /* SecondSetupVM.swift */,
+				B7AA12D92ABAFD92000A082A /* SecondSetupVMProtocols.swift */,
 			);
 			path = "Second Setup Page";
 			sourceTree = "<group>";
@@ -284,6 +295,8 @@
 			children = (
 				B73EF9052AB490F80027A177 /* LastSetupVC.xib */,
 				B73EF9082AB492CA0027A177 /* LastSetupVC.swift */,
+				B7AA12DB2ABB0294000A082A /* LastSetupVM.swift */,
+				B7AA12DD2ABB029D000A082A /* LastSetupVMProtocols.swift */,
 			);
 			path = "Last Setup Page";
 			sourceTree = "<group>";
@@ -299,7 +312,7 @@
 		B7657EDF2AB044BD004300CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B7657EE02AB044CC004300CB /* ProfileModel.swift */,
+				B7657EE02AB044CC004300CB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +353,14 @@
 				B7EA9D8E2AB2F62500727675 /* SettingsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B7AA12D42ABAD86D000A082A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA12D52ABAD886000A082A /* UIViewController + Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,11 +466,18 @@
 				B70145DB2AAF315600BDD00B /* HomeVC.swift in Sources */,
 				B73EF8FD2AB4837E0027A177 /* OpeningVC.swift in Sources */,
 				B70145C92AAF305F00BDD00B /* DrinkWaterApp.xcdatamodeld in Sources */,
-				B7657EE12AB044CC004300CB /* ProfileModel.swift in Sources */,
+				B7657EE12AB044CC004300CB /* User.swift in Sources */,
 				B70145E52AAF42E800BDD00B /* HomeVM.swift in Sources */,
+				B7AA12D82ABAFD4A000A082A /* SecondSetupVM.swift in Sources */,
+				B7AA12DA2ABAFD92000A082A /* SecondSetupVMProtocols.swift in Sources */,
+				B7AA12DC2ABB0294000A082A /* LastSetupVM.swift in Sources */,
 				B70145C12AAF305F00BDD00B /* SceneDelegate.swift in Sources */,
 				B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */,
 				B73EF9012AB48F8F0027A177 /* SecondSetupVC.swift in Sources */,
+				B7AA12DE2ABB029D000A082A /* LastSetupVMProtocols.swift in Sources */,
+				B7AA12D32ABACA02000A082A /* FirstSetupVMProtocols.swift in Sources */,
+				B7AA12D12ABAC6B8000A082A /* FirstSetupVM.swift in Sources */,
+				B7AA12D62ABAD886000A082A /* UIViewController + Extensions.swift in Sources */,
 				B70145DF2AAF3D8E00BDD00B /* HomeCell.swift in Sources */,
 				B73EF9092AB492CA0027A177 /* LastSetupVC.swift in Sources */,
 				B70145F32AAF50E000BDD00B /* FirstSetupVC.swift in Sources */,

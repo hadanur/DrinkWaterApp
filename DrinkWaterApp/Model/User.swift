@@ -8,10 +8,9 @@
 import Foundation
 import UIKit
 
-struct ProfileModel {
-    let name: String
-    let height: Int
-    let weight: Int
-    let id: UUID
-    let male: Bool
+struct User {
+    let name: String?
+    let weight: String?
+    let id: UUID?
+    let gender: Bool?
 }

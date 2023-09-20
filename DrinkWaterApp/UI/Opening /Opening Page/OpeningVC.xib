@@ -41,15 +41,15 @@
                     <string key="text">Kişiye özel günlük su tüketim miktarınızı
 hesaplamak için bazı bilgilerinize ihtiyacımız var</string>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHp-Rt-una">
-                    <rect key="frame" x="44" y="565" width="327" height="52"/>
+                    <rect key="frame" x="44" y="670" width="327" height="52"/>
                     <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="327" id="SjE-Mn-9rz"/>
-                        <constraint firstAttribute="height" constant="52" id="dF2-fQ-gfa"/>
+                        <constraint firstAttribute="height" constant="52" id="75f-Wd-A1W"/>
+                        <constraint firstAttribute="width" constant="327" id="XVc-SV-tmH"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -64,12 +64,12 @@ hesaplamak için bazı bilgilerinize ihtiyacımız var</string>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WsB-V7-2aI" secondAttribute="trailing" constant="82" id="60A-tG-SqW"/>
                 <constraint firstItem="WsB-V7-2aI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="85" id="D4c-gJ-laf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aHp-Rt-una" secondAttribute="trailing" constant="43" id="F3d-eb-qmK"/>
-                <constraint firstItem="aHp-Rt-una" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="WON-4P-64M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aHp-Rt-una" secondAttribute="bottom" constant="140" id="QPi-Ev-suv"/>
                 <constraint firstItem="645-vt-gA6" firstAttribute="top" secondItem="WsB-V7-2aI" secondAttribute="bottom" constant="50" id="fpr-mC-SOX"/>
                 <constraint firstItem="WsB-V7-2aI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="82" id="h1X-Ps-cpg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aHp-Rt-una" secondAttribute="trailing" constant="43" id="p6a-UG-qCf"/>
                 <constraint firstItem="645-vt-gA6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="qzN-My-lc7"/>
-                <constraint firstItem="aHp-Rt-una" firstAttribute="top" secondItem="645-vt-gA6" secondAttribute="bottom" constant="70" id="twX-fW-Pt7"/>
+                <constraint firstItem="aHp-Rt-una" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="rKK-VG-k7W"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="645-vt-gA6" secondAttribute="trailing" constant="43" id="zNS-WW-xq5"/>
             </constraints>
             <point key="canvasLocation" x="117" y="20"/>

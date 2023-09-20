@@ -13,7 +13,7 @@ class OpeningVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.layer.cornerRadius = 30
+        startButton.layer.cornerRadius = 22
     }
     
     @IBAction private func startButtonTapped(_ sender: Any) {

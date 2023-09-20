@@ -14,18 +14,15 @@ class CoreDataManager {
     
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserProfile")
 
     private init() { }
     
-    func saveProfile(name: String, height: Int, weight: Int, male: Bool) -> Bool {
-        let newProfile = NSEntityDescription.insertNewObject(forEntityName: "Profile", into: context)
+    func saveName(name: String) -> Bool {
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: context)
         
-        newProfile.setValue(height, forKey: "height")
-        newProfile.setValue(UUID(), forKey: "id")
-        newProfile.setValue(weight, forKey: "weight")
-        newProfile.setValue(name, forKey: "name")
-        newProfile.setValue(male, forKey: "male")
+        newUser.setValue(UUID(), forKey: "id")
+        newUser.setValue(name, forKey: "name")
         do {
             try context.save()
             return true
@@ -35,25 +32,52 @@ class CoreDataManager {
         }
     }
     
-    func getProfile() -> [ProfileModel]? {
-        var profile = [ProfileModel]()
+    func saveGender(gender: Bool) -> Bool {
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: context)
+        
+        newUser.setValue(UUID(), forKey: "id")
+        newUser.setValue(gender, forKey: "gender")
+        do {
+            try context.save()
+            return true
+        } catch {
+            print("Hata")
+            return false
+        }
+    }
+    
+    func saveWeight(weight: String) -> Bool {
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: context)
+        
+        newUser.setValue(UUID(), forKey: "id")
+        newUser.setValue(weight, forKey: "weight")
+        do {
+            try context.save()
+            return true
+        } catch {
+            print("Hata")
+            return false
+        }
+    }
+    
+    
+    
+    func getProfile() -> [User]? {
+        var userProfile = [User]()
         
         do {
             let results = try context.fetch(fetchRequest)
             
             for result in results as! [NSManagedObject] {
-                if let height = result.value(forKey: "height") as? Int,
-                   let weight = result.value(forKey: "weight") as? Int,
+                if let weight = result.value(forKey: "weight") as? String,
                    let id = result.value(forKey: "id") as? UUID,
-                   let male = result.value(forKey: "male") as? Bool,
+                   let gender = result.value(forKey: "gender") as? Bool,
                    let name = result.value(forKey: "name") as? String {
-                    let user = ProfileModel(name: name, height: height,
-                                            weight: weight, id: id, male: male)
-                                            
-                    profile.append(user)
+                    let user = User(name: name, weight: weight, id: id, gender: gender)
+                    userProfile.append(user)
                 }
             }
-            return profile
+            return userProfile
         } catch {
             print("error")
             return nil

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ProfileCell: UITableViewCell {
-    @IBOutlet weak var profileView: UIView!
+    @IBOutlet private weak var profileView: UIView!
     
     
     func configure() {
