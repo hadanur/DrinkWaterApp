@@ -39,6 +39,10 @@
 		B7047FD02AB4757D0032E5F5 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7047FBD2AB4757D0032E5F5 /* Poppins-SemiBold.ttf */; };
 		B7047FD12AB4757D0032E5F5 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7047FBE2AB4757D0032E5F5 /* Poppins-Italic.ttf */; };
 		B7047FD22AB4757D0032E5F5 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7047FBF2AB4757D0032E5F5 /* Poppins-MediumItalic.ttf */; };
+		B7185BAD2ABC2883002E05BC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7185BAC2ABC2883002E05BC /* TabBar.swift */; };
+		B7185BAF2ABC2B19002E05BC /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7185BAE2ABC2B19002E05BC /* ProfileVM.swift */; };
+		B7185BB12ABC2B24002E05BC /* ProfileVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7185BB02ABC2B24002E05BC /* ProfileVMProtocols.swift */; };
+		B7185BB72ABC7DFC002E05BC /* HomeVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7185BB62ABC7DFC002E05BC /* HomeVMProtocols.swift */; };
 		B73EF8FD2AB4837E0027A177 /* OpeningVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EF8FC2AB4837E0027A177 /* OpeningVC.swift */; };
 		B73EF9012AB48F8F0027A177 /* SecondSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EF8FF2AB48F8F0027A177 /* SecondSetupVC.swift */; };
 		B73EF9022AB48F8F0027A177 /* SecondSetupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73EF9002AB48F8F0027A177 /* SecondSetupVC.xib */; };
@@ -98,6 +102,10 @@
 		B7047FBD2AB4757D0032E5F5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7047FBE2AB4757D0032E5F5 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		B7047FBF2AB4757D0032E5F5 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		B7185BAC2ABC2883002E05BC /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B7185BAE2ABC2B19002E05BC /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		B7185BB02ABC2B24002E05BC /* ProfileVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVMProtocols.swift; sourceTree = "<group>"; };
+		B7185BB62ABC7DFC002E05BC /* HomeVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVMProtocols.swift; sourceTree = "<group>"; };
 		B73EF8FC2AB4837E0027A177 /* OpeningVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningVC.swift; sourceTree = "<group>"; };
 		B73EF8FF2AB48F8F0027A177 /* SecondSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSetupVC.swift; sourceTree = "<group>"; };
 		B73EF9002AB48F8F0027A177 /* SecondSetupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSetupVC.xib; sourceTree = "<group>"; };
@@ -165,6 +173,7 @@
 		B70145D52AAF311E00BDD00B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B7185BAB2ABC2875002E05BC /* Tab Bar */,
 				B7657EEC2AB057D4004300CB /* Settings Page */,
 				B7657EE22AB0466D004300CB /* Profile Page */,
 				B70145E62AAF432300BDD00B /* Opening  */,
@@ -197,10 +206,10 @@
 		B70145D82AAF314900BDD00B /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
+				B7185BB52ABC7DEB002E05BC /* ViewModel */,
 				B70145DD2AAF3D8400BDD00B /* Cell */,
 				B70145D92AAF315600BDD00B /* HomeVC.swift */,
 				B70145DA2AAF315600BDD00B /* HomeVC.xib */,
-				B70145E42AAF42E800BDD00B /* HomeVM.swift */,
 			);
 			path = "Home Page";
 			sourceTree = "<group>";
@@ -228,10 +237,9 @@
 		B70145F02AAF509D00BDD00B /* First Setup Page */ = {
 			isa = PBXGroup;
 			children = (
+				B7185BB32ABC7DD4002E05BC /* ViewModel */,
 				B70145F12AAF50E000BDD00B /* FirstSetupVC.swift */,
 				B70145F22AAF50E000BDD00B /* FirstSetupVC.xib */,
-				B7AA12D22ABACA02000A082A /* FirstSetupVMProtocols.swift */,
-				B7AA12D02ABAC6B8000A082A /* FirstSetupVM.swift */,
 			);
 			path = "First Setup Page";
 			sourceTree = "<group>";
@@ -270,6 +278,50 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		B7185BAB2ABC2875002E05BC /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				B7185BAC2ABC2883002E05BC /* TabBar.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		B7185BB22ABC7DCA002E05BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA12D92ABAFD92000A082A /* SecondSetupVMProtocols.swift */,
+				B7AA12D72ABAFD4A000A082A /* SecondSetupVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B7185BB32ABC7DD4002E05BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA12D02ABAC6B8000A082A /* FirstSetupVM.swift */,
+				B7AA12D22ABACA02000A082A /* FirstSetupVMProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B7185BB42ABC7DDE002E05BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA12DD2ABB029D000A082A /* LastSetupVMProtocols.swift */,
+				B7AA12DB2ABB0294000A082A /* LastSetupVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B7185BB52ABC7DEB002E05BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B70145E42AAF42E800BDD00B /* HomeVM.swift */,
+				B7185BB62ABC7DFC002E05BC /* HomeVMProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B73EF8FB2AB482670027A177 /* Opening Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,10 +334,9 @@
 		B73EF8FE2AB48F540027A177 /* Second Setup Page */ = {
 			isa = PBXGroup;
 			children = (
+				B7185BB22ABC7DCA002E05BC /* ViewModel */,
 				B73EF8FF2AB48F8F0027A177 /* SecondSetupVC.swift */,
 				B73EF9002AB48F8F0027A177 /* SecondSetupVC.xib */,
-				B7AA12D72ABAFD4A000A082A /* SecondSetupVM.swift */,
-				B7AA12D92ABAFD92000A082A /* SecondSetupVMProtocols.swift */,
 			);
 			path = "Second Setup Page";
 			sourceTree = "<group>";
@@ -293,10 +344,9 @@
 		B73EF9032AB490CF0027A177 /* Last Setup Page */ = {
 			isa = PBXGroup;
 			children = (
+				B7185BB42ABC7DDE002E05BC /* ViewModel */,
 				B73EF9052AB490F80027A177 /* LastSetupVC.xib */,
 				B73EF9082AB492CA0027A177 /* LastSetupVC.swift */,
-				B7AA12DB2ABB0294000A082A /* LastSetupVM.swift */,
-				B7AA12DD2ABB029D000A082A /* LastSetupVMProtocols.swift */,
 			);
 			path = "Last Setup Page";
 			sourceTree = "<group>";
@@ -323,6 +373,8 @@
 				B7657EE72AB055E7004300CB /* Cell */,
 				B7657EE32AB04683004300CB /* ProfileVC.swift */,
 				B7657EE42AB04683004300CB /* ProfileVC.xib */,
+				B7185BAE2ABC2B19002E05BC /* ProfileVM.swift */,
+				B7185BB02ABC2B24002E05BC /* ProfileVMProtocols.swift */,
 			);
 			path = "Profile Page";
 			sourceTree = "<group>";
@@ -465,15 +517,19 @@
 				B70145BF2AAF305F00BDD00B /* AppDelegate.swift in Sources */,
 				B70145DB2AAF315600BDD00B /* HomeVC.swift in Sources */,
 				B73EF8FD2AB4837E0027A177 /* OpeningVC.swift in Sources */,
+				B7185BAD2ABC2883002E05BC /* TabBar.swift in Sources */,
 				B70145C92AAF305F00BDD00B /* DrinkWaterApp.xcdatamodeld in Sources */,
 				B7657EE12AB044CC004300CB /* User.swift in Sources */,
 				B70145E52AAF42E800BDD00B /* HomeVM.swift in Sources */,
 				B7AA12D82ABAFD4A000A082A /* SecondSetupVM.swift in Sources */,
+				B7185BB12ABC2B24002E05BC /* ProfileVMProtocols.swift in Sources */,
 				B7AA12DA2ABAFD92000A082A /* SecondSetupVMProtocols.swift in Sources */,
 				B7AA12DC2ABB0294000A082A /* LastSetupVM.swift in Sources */,
+				B7185BAF2ABC2B19002E05BC /* ProfileVM.swift in Sources */,
 				B70145C12AAF305F00BDD00B /* SceneDelegate.swift in Sources */,
 				B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */,
 				B73EF9012AB48F8F0027A177 /* SecondSetupVC.swift in Sources */,
+				B7185BB72ABC7DFC002E05BC /* HomeVMProtocols.swift in Sources */,
 				B7AA12DE2ABB029D000A082A /* LastSetupVMProtocols.swift in Sources */,
 				B7AA12D32ABACA02000A082A /* FirstSetupVMProtocols.swift in Sources */,
 				B7AA12D12ABAC6B8000A082A /* FirstSetupVM.swift in Sources */,

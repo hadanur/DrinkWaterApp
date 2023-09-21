@@ -16,7 +16,7 @@ final class LastSetupVM {
 
 extension LastSetupVM: LastSetupVMProtocol {
     func saveWeight(weight: String) {
-        if CoreDataManager.shared.saveWeight(weight: weight) == true {
+        if CoreDataManager.shared.saveProfile(name: "", gender: false, weight: weight) == true {
             delegate?.handleVMOutput(.saveWeightSuccess)
         } else {
             delegate?.handleVMOutput(.saveWeightError)

@@ -41,7 +41,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ3-oP-517">
                     <rect key="frame" x="44" y="670" width="327" height="52"/>
-                    <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="327" id="E54-Wu-x7d"/>
                         <constraint firstAttribute="height" constant="52" id="XYj-pj-u0R"/>

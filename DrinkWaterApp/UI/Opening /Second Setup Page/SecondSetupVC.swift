@@ -19,8 +19,14 @@ class SecondSetupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.delegate = self
+        
         startButton.layer.cornerRadius = 22
         startButton.isHidden = true
+        startButton.clipsToBounds = false
+        startButton.layer.shadowOpacity = 0.4
+        startButton.layer.shadowOffset = CGSizeMake(1, 2)
+        startButton.layer.shadowColor = UIColor.link.cgColor
         
         maleView.layer.cornerRadius = 20
         maleView.clipsToBounds = false
@@ -42,9 +48,7 @@ class SecondSetupVC: UIViewController {
     }
 
     @IBAction private func startButtonTapped(_ sender: Any) {
-        navigationController?.pushViewController(LastSetupVC.create(), animated: true)
-        navigationItem.backButtonDisplayMode = .minimal
-
+        viewModel.saveGender(gender: gender)
     }
     
     @objc func didMaleViewTapped(_ sender: UITapGestureRecognizer) {

@@ -13,7 +13,12 @@ class OpeningVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         startButton.layer.cornerRadius = 22
+        startButton.clipsToBounds = false
+        startButton.layer.shadowOpacity = 0.4
+        startButton.layer.shadowOffset = CGSizeMake(1, 2)
+        startButton.layer.shadowColor = UIColor.link.cgColor
     }
     
     @IBAction private func startButtonTapped(_ sender: Any) {

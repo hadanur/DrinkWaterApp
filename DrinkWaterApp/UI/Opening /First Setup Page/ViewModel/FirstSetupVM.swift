@@ -16,7 +16,7 @@ final class FirstSetupVM {
 
 extension FirstSetupVM: FirstSetupVMProtocol {
     func saveName(name: String) {
-        if CoreDataManager.shared.saveName(name: name) == true {
+        if CoreDataManager.shared.saveProfile(name: name, gender: true, weight: "") == true {
             delegate?.handleVMOutput(.saveNameSuccess)
         } else {
             delegate?.handleVMOutput(.saveNameError)

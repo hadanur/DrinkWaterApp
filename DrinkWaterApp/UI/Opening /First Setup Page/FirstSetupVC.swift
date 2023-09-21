@@ -15,18 +15,29 @@ class FirstSetupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         textView.layer.cornerRadius = 24
         textView.layer.shadowRadius = 4
         textView.clipsToBounds = false
         textView.layer.shadowOpacity = 0.4
         textView.layer.shadowOffset = CGSizeMake(2, 2)
         textView.layer.shadowColor = UIColor.link.cgColor
+        
         startButton.layer.cornerRadius = 22
+        startButton.clipsToBounds = false
+        startButton.layer.shadowOpacity = 0.4
+        startButton.layer.shadowOffset = CGSizeMake(1, 2)
+        startButton.layer.shadowColor = UIColor.link.cgColor
+        
         viewModel.delegate = self
     }
-
+    
     @IBAction private func startButtonTapped(_ sender: Any) {
-        viewModel.saveName(name: textView.text)
+        if textView.text == "" {
+            showAlert(title: "Hata", message: "Lütfen İsminizi Girin")
+        } else {
+            viewModel.saveName(name: textView.text)
+        }
     }
 }
 

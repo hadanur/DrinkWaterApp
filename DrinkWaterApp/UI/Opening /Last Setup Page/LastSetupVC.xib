@@ -54,11 +54,11 @@
                     </constraints>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIY-2S-oQn">
                     <rect key="frame" x="44" y="670" width="327" height="52"/>
-                    <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="52" id="Gt0-ru-HeD"/>
                         <constraint firstAttribute="width" constant="327" id="aEH-fb-gZY"/>

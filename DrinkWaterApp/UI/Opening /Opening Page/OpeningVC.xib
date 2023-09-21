@@ -46,7 +46,7 @@ hesaplamak için bazı bilgilerinize ihtiyacımız var</string>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHp-Rt-una">
                     <rect key="frame" x="44" y="670" width="327" height="52"/>
-                    <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.33333333333333331" green="0.55294117649999996" blue="0.93205250850340138" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="52" id="75f-Wd-A1W"/>
                         <constraint firstAttribute="width" constant="327" id="XVc-SV-tmH"/>

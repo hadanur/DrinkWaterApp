@@ -18,24 +18,12 @@ class CoreDataManager {
 
     private init() { }
     
-    func saveName(name: String) -> Bool {
+    func saveProfile(name: String, gender: Bool, weight: String) -> Bool {
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: context)
         
         newUser.setValue(UUID(), forKey: "id")
         newUser.setValue(name, forKey: "name")
-        do {
-            try context.save()
-            return true
-        } catch {
-            print("Hata")
-            return false
-        }
-    }
-    
-    func saveGender(gender: Bool) -> Bool {
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: context)
-        
-        newUser.setValue(UUID(), forKey: "id")
+        newUser.setValue(weight, forKey: "weight")
         newUser.setValue(gender, forKey: "gender")
         do {
             try context.save()
@@ -45,22 +33,6 @@ class CoreDataManager {
             return false
         }
     }
-    
-    func saveWeight(weight: String) -> Bool {
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: context)
-        
-        newUser.setValue(UUID(), forKey: "id")
-        newUser.setValue(weight, forKey: "weight")
-        do {
-            try context.save()
-            return true
-        } catch {
-            print("Hata")
-            return false
-        }
-    }
-    
-    
     
     func getProfile() -> [User]? {
         var userProfile = [User]()

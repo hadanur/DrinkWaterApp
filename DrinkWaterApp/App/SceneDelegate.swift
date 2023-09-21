@@ -17,14 +17,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         let navC = UINavigationController()
+        let home = TabBar()
         
         if let _ = UserDefaults.standard.string(forKey: "isFirstOpen") {
-            let home = HomeVC.create()
             self.window?.rootViewController = home
         } else {
             let openingVC = OpeningVC.create()
             navC.viewControllers = [openingVC]
             navC.navigationItem.setHidesBackButton(true, animated: true)
+            navC.navigationBar.isHidden = true
             self.window?.rootViewController = navC
         }
         

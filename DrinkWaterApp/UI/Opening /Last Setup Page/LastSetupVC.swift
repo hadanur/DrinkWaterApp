@@ -26,13 +26,21 @@ class LastSetupVC: UIViewController {
         textView.layer.shadowOpacity = 0.4
         textView.layer.shadowOffset = CGSizeMake(2, 2)
         textView.layer.shadowColor = UIColor.link.cgColor
+        
         startButton.layer.cornerRadius = 22
+        startButton.clipsToBounds = false
+        startButton.layer.shadowOpacity = 0.4
+        startButton.layer.shadowOffset = CGSizeMake(1, 2)
+        startButton.layer.shadowColor = UIColor.link.cgColor
     }
     
     @IBAction private func startButtonTapped(_ sender: Any) {
-        viewModel.saveWeight(weight: textView.text)
+        if textView.text == "" {
+            showAlert(title: "Hata", message: "Lütfen Kilonuzu Girin")
+        } else {
+            viewModel.saveWeight(weight: textView.text)
+        }
     }
-    
 }
 
 extension LastSetupVC {
@@ -47,8 +55,10 @@ extension LastSetupVC: LastSetupVMDelegate {
     func handleVMOutput(_ output: LastSetupVMOutput) {
         switch output {
         case .saveWeightSuccess:
-            navigationController?.pushViewController(HomeVC.create(), animated: true)
-            navigationItem.backButtonDisplayMode = .minimal
+            navigationController?.pushViewController(TabBar(), animated: true)
+            navigationController?.navigationItem.setHidesBackButton(true, animated: true)
+            UserDefaults.standard.set("opened", forKey: "isFirstOpen")
+            navigationController?.navigationBar.isHidden = true
         case .saveWeightError:
             showAlert(title: "Hata", message: "Kilo Kaydedilemedi")
         }

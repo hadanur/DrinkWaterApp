@@ -16,7 +16,7 @@ final class SecondSetupVM {
 
 extension SecondSetupVM: SecondSetupVMProtocol {
     func saveGender(gender: Bool) {
-        if CoreDataManager.shared.saveGender(gender: gender) == true {
+        if CoreDataManager.shared.saveProfile(name: "", gender: gender, weight: "") == true {
             delegate?.handleVMOutput(.saveGenderSuccess)
         } else {
             delegate?.handleVMOutput(.saveGenderError)
