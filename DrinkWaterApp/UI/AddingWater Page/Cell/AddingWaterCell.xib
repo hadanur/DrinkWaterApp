@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddingWaterCell" customModule="DrinkWaterApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERr-8B-XnZ">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="200 " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gle-rJ-EhU">
+                            <rect key="frame" x="59" y="400" width="274" height="44"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="3KV-YC-RzM"/>
+                                <constraint firstAttribute="width" constant="274" id="Dta-MN-7tI"/>
+                            </constraints>
+                            <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6X-W8-hom">
+                            <rect key="frame" x="33" y="509" width="327" height="52"/>
+                            <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="ba4-gh-Hsa"/>
+                                <constraint firstAttribute="width" constant="327" id="gh6-fU-Q6J"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Kaydet"/>
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="sOA-Vy-p5u"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/500 Ml" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-3q-kG4">
+                            <rect key="frame" x="130" y="361" width="133" height="24"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                            <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="H6X-W8-hom" firstAttribute="leading" secondItem="ERr-8B-XnZ" secondAttribute="leading" constant="33" id="8oU-aV-TqA"/>
+                        <constraint firstAttribute="trailing" secondItem="u7u-3q-kG4" secondAttribute="trailing" constant="130" id="Kg6-yL-mER"/>
+                        <constraint firstItem="Gle-rJ-EhU" firstAttribute="leading" secondItem="ERr-8B-XnZ" secondAttribute="leading" constant="59" id="R31-sG-KCG"/>
+                        <constraint firstItem="Gle-rJ-EhU" firstAttribute="top" secondItem="u7u-3q-kG4" secondAttribute="bottom" constant="15" id="c0M-U3-QJZ"/>
+                        <constraint firstAttribute="trailing" secondItem="H6X-W8-hom" secondAttribute="trailing" constant="33" id="eJs-eN-YZ9"/>
+                        <constraint firstAttribute="trailing" secondItem="Gle-rJ-EhU" secondAttribute="trailing" constant="60" id="jgQ-rB-L7f"/>
+                        <constraint firstItem="u7u-3q-kG4" firstAttribute="leading" secondItem="ERr-8B-XnZ" secondAttribute="leading" constant="130" id="pHS-qD-84X"/>
+                        <constraint firstItem="H6X-W8-hom" firstAttribute="top" secondItem="Gle-rJ-EhU" secondAttribute="bottom" constant="65" id="vrF-0z-1T8"/>
+                        <constraint firstItem="Gle-rJ-EhU" firstAttribute="top" secondItem="ERr-8B-XnZ" secondAttribute="top" constant="400" id="wAl-P2-Pyu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ERr-8B-XnZ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="3XD-0I-8su"/>
+                <constraint firstItem="ERr-8B-XnZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zlj-lu-kdY"/>
+                <constraint firstAttribute="bottom" secondItem="ERr-8B-XnZ" secondAttribute="bottom" id="msN-kk-VBt"/>
+                <constraint firstItem="ERr-8B-XnZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rfY-h6-fbc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="saveButton" destination="H6X-W8-hom" id="uFC-zF-qbZ"/>
+                <outlet property="textView" destination="Gle-rJ-EhU" id="Q9f-wi-WvN"/>
+                <outlet property="waterView" destination="ERr-8B-XnZ" id="Ol1-bv-Bpp"/>
+            </connections>
+            <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

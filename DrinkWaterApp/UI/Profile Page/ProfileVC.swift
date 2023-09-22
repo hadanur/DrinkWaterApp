@@ -21,9 +21,7 @@ class ProfileVC: UIViewController {
         
         let profileCell = UINib(nibName: "ProfileCell", bundle: nil)
         tableView.register(profileCell, forCellReuseIdentifier: "profileCell")
-        
     }
-
 
 }
 

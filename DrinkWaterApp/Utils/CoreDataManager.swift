@@ -12,13 +12,14 @@ import CoreData
 class CoreDataManager {
     static let shared = CoreDataManager()
     
-    static let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let context = appDelegate.persistentContainer.viewContext
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserProfile")
 
+    
     private init() { }
     
     func saveProfile(name: String, gender: Bool, weight: String) -> Bool {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: context)
         
         newUser.setValue(UUID(), forKey: "id")
@@ -35,6 +36,10 @@ class CoreDataManager {
     }
     
     func getProfile() -> [User]? {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserProfile")
+
         var userProfile = [User]()
         
         do {
@@ -57,6 +62,43 @@ class CoreDataManager {
     }
     
     func deleteProfile() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserProfile")
+        
+        if let results = try? context.fetch(fetchRequest) {
+            for result in results {
+                context.delete(result as! NSManagedObject)
+            }
+        }
+        do {
+            try context.save()
+        } catch {
+            print("error")
+        }
+    }
+    
+    func addingWaterData(water: Int) -> Bool {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let addingWater = NSEntityDescription.insertNewObject(forEntityName: "AddWater", into: context)
+        
+        addingWater.setValue(UUID(), forKey: "id")
+        addingWater.setValue(water, forKey: "water")
+        do {
+            try context.save()
+            return true
+        } catch {
+            print("Hata")
+            return false
+        }
+    }
+    
+    func deleteWaterData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AddWater")
         
         if let results = try? context.fetch(fetchRequest) {
             for result in results {

@@ -20,8 +20,13 @@ class HomeVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
     }
 
+    @objc func addButtonTapped() {
+        navigationController?.pushViewController(AddingWaterVC.create(), animated: true)
+    }
 }
 
 extension HomeVC {

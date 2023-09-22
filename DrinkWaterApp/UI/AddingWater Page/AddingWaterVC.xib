@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,29 +8,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="DrinkWaterApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddingWaterVC" customModule="DrinkWaterApp" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="wI7-DI-KAv" id="zbS-kR-Vwn"/>
+                <outlet property="tableView" destination="VJ2-Wf-BYB" id="j0j-Oe-jos"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wI7-DI-KAv">
-                    <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VJ2-Wf-BYB">
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7iz-xC-Dan"/>
+                        <outlet property="delegate" destination="-1" id="Q72-GZ-93G"/>
+                    </connections>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="wI7-DI-KAv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0aY-hA-As6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wI7-DI-KAv" secondAttribute="bottom" id="5md-F3-el4"/>
-                <constraint firstItem="wI7-DI-KAv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dbq-qK-j2G"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wI7-DI-KAv" secondAttribute="trailing" id="sWH-dk-5SR"/>
+                <constraint firstItem="VJ2-Wf-BYB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1rM-Rl-oC0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VJ2-Wf-BYB" secondAttribute="bottom" id="1ub-et-L12"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VJ2-Wf-BYB" secondAttribute="trailing" id="3O5-pI-VhJ"/>
+                <constraint firstItem="VJ2-Wf-BYB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uvO-uJ-bup"/>
             </constraints>
             <point key="canvasLocation" x="117" y="20"/>
         </view>

@@ -56,6 +56,13 @@
 		B7657EEB2AB055FE004300CB /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEA2AB055FE004300CB /* ProfileCell.xib */; };
 		B7657EEF2AB05822004300CB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EED2AB05822004300CB /* SettingsVC.swift */; };
 		B7657EF02AB05822004300CB /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEE2AB05822004300CB /* SettingsVC.xib */; };
+		B78923412ABD700900BCF581 /* AddingWaterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B789233F2ABD700900BCF581 /* AddingWaterVC.swift */; };
+		B78923422ABD700900BCF581 /* AddingWaterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78923402ABD700900BCF581 /* AddingWaterVC.xib */; };
+		B78923452ABD73FB00BCF581 /* AddingWaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78923442ABD73FB00BCF581 /* AddingWaterCell.swift */; };
+		B78923472ABD741F00BCF581 /* AddingWaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78923462ABD741F00BCF581 /* AddingWaterCell.xib */; };
+		B78923492ABD765F00BCF581 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78923482ABD765F00BCF581 /* Water.swift */; };
+		B789234C2ABD795800BCF581 /* AddingVaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B789234B2ABD795800BCF581 /* AddingVaterVM.swift */; };
+		B789234E2ABD79B300BCF581 /* AddingWaterVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B789234D2ABD79B300BCF581 /* AddingWaterVMProtocols.swift */; };
 		B7AA12D12ABAC6B8000A082A /* FirstSetupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D02ABAC6B8000A082A /* FirstSetupVM.swift */; };
 		B7AA12D32ABACA02000A082A /* FirstSetupVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D22ABACA02000A082A /* FirstSetupVMProtocols.swift */; };
 		B7AA12D62ABAD886000A082A /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA12D52ABAD886000A082A /* UIViewController + Extensions.swift */; };
@@ -119,6 +126,13 @@
 		B7657EEA2AB055FE004300CB /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		B7657EED2AB05822004300CB /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		B7657EEE2AB05822004300CB /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		B789233F2ABD700900BCF581 /* AddingWaterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingWaterVC.swift; sourceTree = "<group>"; };
+		B78923402ABD700900BCF581 /* AddingWaterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddingWaterVC.xib; sourceTree = "<group>"; };
+		B78923442ABD73FB00BCF581 /* AddingWaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingWaterCell.swift; sourceTree = "<group>"; };
+		B78923462ABD741F00BCF581 /* AddingWaterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddingWaterCell.xib; sourceTree = "<group>"; };
+		B78923482ABD765F00BCF581 /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		B789234B2ABD795800BCF581 /* AddingVaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingVaterVM.swift; sourceTree = "<group>"; };
+		B789234D2ABD79B300BCF581 /* AddingWaterVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingWaterVMProtocols.swift; sourceTree = "<group>"; };
 		B7AA12D02ABAC6B8000A082A /* FirstSetupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupVM.swift; sourceTree = "<group>"; };
 		B7AA12D22ABACA02000A082A /* FirstSetupVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSetupVMProtocols.swift; sourceTree = "<group>"; };
 		B7AA12D52ABAD886000A082A /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
@@ -173,6 +187,7 @@
 		B70145D52AAF311E00BDD00B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B789233E2ABD6FDE00BCF581 /* AddingWater Page */,
 				B7185BAB2ABC2875002E05BC /* Tab Bar */,
 				B7657EEC2AB057D4004300CB /* Settings Page */,
 				B7657EE22AB0466D004300CB /* Profile Page */,
@@ -363,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				B7657EE02AB044CC004300CB /* User.swift */,
+				B78923482ABD765F00BCF581 /* Water.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +421,35 @@
 				B7EA9D8E2AB2F62500727675 /* SettingsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B789233E2ABD6FDE00BCF581 /* AddingWater Page */ = {
+			isa = PBXGroup;
+			children = (
+				B78923432ABD73F000BCF581 /* Cell */,
+				B789233F2ABD700900BCF581 /* AddingWaterVC.swift */,
+				B78923402ABD700900BCF581 /* AddingWaterVC.xib */,
+				B789234A2ABD794400BCF581 /* ViewModel */,
+			);
+			path = "AddingWater Page";
+			sourceTree = "<group>";
+		};
+		B78923432ABD73F000BCF581 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B78923442ABD73FB00BCF581 /* AddingWaterCell.swift */,
+				B78923462ABD741F00BCF581 /* AddingWaterCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B789234A2ABD794400BCF581 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B789234B2ABD795800BCF581 /* AddingVaterVM.swift */,
+				B789234D2ABD79B300BCF581 /* AddingWaterVMProtocols.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B7AA12D42ABAD86D000A082A /* Extensions */ = {
@@ -478,6 +523,7 @@
 				B7047FC62AB4757D0032E5F5 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				B7047FC42AB4757D0032E5F5 /* Poppins-Light.ttf in Resources */,
 				B7657EE62AB04683004300CB /* ProfileVC.xib in Resources */,
+				B78923422ABD700900BCF581 /* AddingWaterVC.xib in Resources */,
 				B7047FC72AB4757D0032E5F5 /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				B70145CE2AAF306000BDD00B /* LaunchScreen.storyboard in Resources */,
 				B7047FCE2AB4757D0032E5F5 /* Poppins-Black.ttf in Resources */,
@@ -502,6 +548,7 @@
 				B7047FCD2AB4757D0032E5F5 /* Poppins-Bold.ttf in Resources */,
 				B7657EEB2AB055FE004300CB /* ProfileCell.xib in Resources */,
 				B7047FC52AB4757D0032E5F5 /* Poppins-Medium.ttf in Resources */,
+				B78923472ABD741F00BCF581 /* AddingWaterCell.xib in Resources */,
 				B7047FC02AB4757D0032E5F5 /* Poppins-ExtraLight.ttf in Resources */,
 				B7047FC32AB4757D0032E5F5 /* Poppins-BoldItalic.ttf in Resources */,
 			);
@@ -519,15 +566,20 @@
 				B73EF8FD2AB4837E0027A177 /* OpeningVC.swift in Sources */,
 				B7185BAD2ABC2883002E05BC /* TabBar.swift in Sources */,
 				B70145C92AAF305F00BDD00B /* DrinkWaterApp.xcdatamodeld in Sources */,
+				B78923412ABD700900BCF581 /* AddingWaterVC.swift in Sources */,
 				B7657EE12AB044CC004300CB /* User.swift in Sources */,
 				B70145E52AAF42E800BDD00B /* HomeVM.swift in Sources */,
 				B7AA12D82ABAFD4A000A082A /* SecondSetupVM.swift in Sources */,
+				B789234E2ABD79B300BCF581 /* AddingWaterVMProtocols.swift in Sources */,
 				B7185BB12ABC2B24002E05BC /* ProfileVMProtocols.swift in Sources */,
+				B78923452ABD73FB00BCF581 /* AddingWaterCell.swift in Sources */,
 				B7AA12DA2ABAFD92000A082A /* SecondSetupVMProtocols.swift in Sources */,
 				B7AA12DC2ABB0294000A082A /* LastSetupVM.swift in Sources */,
+				B78923492ABD765F00BCF581 /* Water.swift in Sources */,
 				B7185BAF2ABC2B19002E05BC /* ProfileVM.swift in Sources */,
 				B70145C12AAF305F00BDD00B /* SceneDelegate.swift in Sources */,
 				B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */,
+				B789234C2ABD795800BCF581 /* AddingVaterVM.swift in Sources */,
 				B73EF9012AB48F8F0027A177 /* SecondSetupVC.swift in Sources */,
 				B7185BB72ABC7DFC002E05BC /* HomeVMProtocols.swift in Sources */,
 				B7AA12DE2ABB029D000A082A /* LastSetupVMProtocols.swift in Sources */,

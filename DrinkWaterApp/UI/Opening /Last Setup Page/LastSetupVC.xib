@@ -52,7 +52,7 @@
                         <constraint firstAttribute="height" constant="44" id="DTo-8Z-s9W"/>
                         <constraint firstAttribute="width" constant="274" id="Xkp-ES-mkc"/>
                     </constraints>
-                    <color key="textColor" systemColor="labelColor"/>
+                    <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numberPad"/>
                 </textView>
@@ -96,9 +96,6 @@
     <resources>
         <image name="lastPageImage" width="250" height="251"/>
         <image name="lastPageProgress" width="375" height="35"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
