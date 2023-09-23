@@ -10,17 +10,16 @@ import UIKit
 class HomeVC: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
-    private var viewModel: HomeVM!
+    private var viewModel: HomeVMProtocol!
+    private var water = [AddingWater]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.delegate = self
+        
         let homeCell = UINib(nibName: "HomeCell", bundle: nil)
         tableView.register(homeCell, forCellReuseIdentifier: "homeCell")
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+      
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
     }
 
@@ -45,6 +44,19 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeCell
         return cell
+    }
+    
+}
+
+extension HomeVC: HomeVMDelegate {
+    func handleVMOutput(_ output: HomeVMOutput) {
+        switch output {
+        case .getWaterDataSuccess(let water):
+            self.water = water
+            tableView.reloadData()
+        case .getWaterDataError:
+            showAlert(title: "Hata", message: "Veri Yüklenemedi")
+        }
     }
     
     

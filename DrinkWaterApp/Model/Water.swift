@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct AddingWater {
-    let water: Int
+    let water: String
     let id : UUID
 }
 

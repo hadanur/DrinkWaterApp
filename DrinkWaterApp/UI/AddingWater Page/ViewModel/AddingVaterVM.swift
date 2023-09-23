@@ -15,7 +15,7 @@ class AddingWaterVM {
 }
 
 extension AddingWaterVM: AddingWaterVMProtocol {
-    func addWaterData(water: Int) {
+    func addWaterData(water: String) {
         if CoreDataManager.shared.addingWaterData(water: water) == true {
             delegate?.handleVMOutput(.saveDataSuccess)
         } else {

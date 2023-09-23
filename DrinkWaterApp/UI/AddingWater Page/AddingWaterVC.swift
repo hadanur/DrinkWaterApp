@@ -39,6 +39,7 @@ extension AddingWaterVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "addingWaterCell") as! AddingWaterCell
         cell.configure()
+        cell.delegate = self
         return cell
     }
 }
@@ -53,6 +54,5 @@ extension AddingWaterVC: AddingWaterVMDelegate {
             showAlert(title: "Hata", message: "Veri Kaydedilemedi")
         }
     }
-    
-    
+
 }

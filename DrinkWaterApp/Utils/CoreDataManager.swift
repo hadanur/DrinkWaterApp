@@ -78,7 +78,7 @@ class CoreDataManager {
         }
     }
     
-    func addingWaterData(water: Int) -> Bool {
+    func addingWaterData(water: String) -> Bool {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -93,6 +93,31 @@ class CoreDataManager {
             print("Hata")
             return false
         }
+    }
+    
+    func getWaterData() -> [AddingWater]?  {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AddWater")
+        
+        var waterData = [AddingWater]()
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            
+            for result in results as! [NSManagedObject] {
+                if let water = result.value(forKey: "water") as? String,
+                   let id = result.value(forKey: "id") as? UUID {
+                    let water = AddingWater(water: water, id: id)
+                    waterData.append(water)
+                }
+            }
+            return waterData
+        } catch {
+            print("error")
+            return nil
+        }
+        
     }
     
     func deleteWaterData() {

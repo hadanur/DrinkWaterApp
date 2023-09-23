@@ -15,4 +15,14 @@ extension UIViewController {
         alertController.addAction(okButton)
         present(alertController, animated: true)
     }
+    
+    func createNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = ""
+        content.body = ""
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
 }

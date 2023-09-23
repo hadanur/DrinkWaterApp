@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import UIKit
+
+protocol HomeVMProtocol {
+    var delegate: HomeVMDelegate? { get set }
+
+    func getWaterData()
+}
+
+protocol HomeVMDelegate: AnyObject {
+    func handleVMOutput(_ output: HomeVMOutput)
+}
+
+enum HomeVMOutput {
+    case getWaterDataSuccess(water: [AddingWater])
+    case getWaterDataError
+}
