@@ -54,5 +54,15 @@ extension AddingWaterVC: AddingWaterVMDelegate {
             showAlert(title: "Hata", message: "Veri Kaydedilemedi")
         }
     }
+}
 
+extension AddingWaterVC: AddingWaterCellDelegate {
+    func saveButtonTapped(water: String) {
+        viewModel.addWaterData(water: water)
+    }
+    
+    func emptyInputsError() {
+        showAlert(title: "Hata", message: "Veri Kaydedilemedi")
+    }
+    
 }

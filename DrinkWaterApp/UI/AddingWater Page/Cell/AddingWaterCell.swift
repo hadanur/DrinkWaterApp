@@ -8,14 +8,17 @@
 import Foundation
 import UIKit
 
+protocol AddingWaterCellDelegate: AnyObject {
+    func saveButtonTapped(water: String)
+    func emptyInputsError()
+}
 
 class AddingWaterCell: UITableViewCell {
     @IBOutlet private weak var waterView: UIView!
     @IBOutlet private weak var saveButton: UIButton!
     @IBOutlet private weak var textView: UITextView!
     
-    private var viewModel: AddingWaterVM!
-    weak var delegate: AddingWaterVMDelegate?
+    weak var delegate: AddingWaterCellDelegate?
     
     func configure () {
         textView.layer.cornerRadius = 24
@@ -33,12 +36,12 @@ class AddingWaterCell: UITableViewCell {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        if textView.text == "" {
-            delegate?.handleVMOutput(.saveDataError)
+        guard let water = textView.text else { delegate?.emptyInputsError(); return }
+        
+        if textView.text != "" {
+            delegate?.saveButtonTapped(water: water)
         } else {
-            viewModel.addWaterData(water: textView.text)
-            delegate?.handleVMOutput(.saveDataSuccess)
+            delegate?.emptyInputsError()
         }
-
     }
 }

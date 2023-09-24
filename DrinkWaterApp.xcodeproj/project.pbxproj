@@ -48,6 +48,12 @@
 		B73EF9022AB48F8F0027A177 /* SecondSetupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73EF9002AB48F8F0027A177 /* SecondSetupVC.xib */; };
 		B73EF9072AB490F80027A177 /* LastSetupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73EF9052AB490F80027A177 /* LastSetupVC.xib */; };
 		B73EF9092AB492CA0027A177 /* LastSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EF9082AB492CA0027A177 /* LastSetupVC.swift */; };
+		B74F22212AC059820054AD27 /* DailyWaterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F221F2AC059820054AD27 /* DailyWaterVC.swift */; };
+		B74F22222AC059820054AD27 /* DailyWaterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B74F22202AC059820054AD27 /* DailyWaterVC.xib */; };
+		B74F22262AC05C110054AD27 /* DailyWaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F22252AC05C110054AD27 /* DailyWaterCell.swift */; };
+		B74F22282AC05C450054AD27 /* DailyWaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B74F22272AC05C450054AD27 /* DailyWaterCell.xib */; };
+		B74F222A2AC05D6C0054AD27 /* DailyWaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F22292AC05D6C0054AD27 /* DailyWaterVM.swift */; };
+		B74F222C2AC05D730054AD27 /* DailyWaterVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F222B2AC05D730054AD27 /* DailyWaterVMProtocols.swift */; };
 		B7657EDE2AB044AA004300CB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EDD2AB044AA004300CB /* CoreDataManager.swift */; };
 		B7657EE12AB044CC004300CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE02AB044CC004300CB /* User.swift */; };
 		B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE32AB04683004300CB /* ProfileVC.swift */; };
@@ -118,6 +124,12 @@
 		B73EF9002AB48F8F0027A177 /* SecondSetupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSetupVC.xib; sourceTree = "<group>"; };
 		B73EF9052AB490F80027A177 /* LastSetupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastSetupVC.xib; sourceTree = "<group>"; };
 		B73EF9082AB492CA0027A177 /* LastSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSetupVC.swift; sourceTree = "<group>"; };
+		B74F221F2AC059820054AD27 /* DailyWaterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterVC.swift; sourceTree = "<group>"; };
+		B74F22202AC059820054AD27 /* DailyWaterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyWaterVC.xib; sourceTree = "<group>"; };
+		B74F22252AC05C110054AD27 /* DailyWaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterCell.swift; sourceTree = "<group>"; };
+		B74F22272AC05C450054AD27 /* DailyWaterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyWaterCell.xib; sourceTree = "<group>"; };
+		B74F22292AC05D6C0054AD27 /* DailyWaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterVM.swift; sourceTree = "<group>"; };
+		B74F222B2AC05D730054AD27 /* DailyWaterVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterVMProtocols.swift; sourceTree = "<group>"; };
 		B7657EDD2AB044AA004300CB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B7657EE02AB044CC004300CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7657EE32AB04683004300CB /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -187,6 +199,7 @@
 		B70145D52AAF311E00BDD00B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B74F221E2AC0595F0054AD27 /* SetDailyWater Page */,
 				B789233E2ABD6FDE00BCF581 /* AddingWater Page */,
 				B7185BAB2ABC2875002E05BC /* Tab Bar */,
 				B7657EEC2AB057D4004300CB /* Settings Page */,
@@ -366,6 +379,35 @@
 			path = "Last Setup Page";
 			sourceTree = "<group>";
 		};
+		B74F221E2AC0595F0054AD27 /* SetDailyWater Page */ = {
+			isa = PBXGroup;
+			children = (
+				B74F22242AC059B10054AD27 /* Cell */,
+				B74F22232AC059AA0054AD27 /* ViewModel */,
+				B74F221F2AC059820054AD27 /* DailyWaterVC.swift */,
+				B74F22202AC059820054AD27 /* DailyWaterVC.xib */,
+			);
+			path = "SetDailyWater Page";
+			sourceTree = "<group>";
+		};
+		B74F22232AC059AA0054AD27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B74F22292AC05D6C0054AD27 /* DailyWaterVM.swift */,
+				B74F222B2AC05D730054AD27 /* DailyWaterVMProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B74F22242AC059B10054AD27 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B74F22252AC05C110054AD27 /* DailyWaterCell.swift */,
+				B74F22272AC05C450054AD27 /* DailyWaterCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B7657EDC2AB04497004300CB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +570,7 @@
 				B70145CE2AAF306000BDD00B /* LaunchScreen.storyboard in Resources */,
 				B7047FCE2AB4757D0032E5F5 /* Poppins-Black.ttf in Resources */,
 				B73EF9072AB490F80027A177 /* LastSetupVC.xib in Resources */,
+				B74F22282AC05C450054AD27 /* DailyWaterCell.xib in Resources */,
 				B70145F42AAF50E000BDD00B /* FirstSetupVC.xib in Resources */,
 				B7657EF02AB05822004300CB /* SettingsVC.xib in Resources */,
 				B7047FC12AB4757D0032E5F5 /* Poppins-ThinItalic.ttf in Resources */,
@@ -538,6 +581,7 @@
 				B7047FC82AB4757D0032E5F5 /* Poppins-ExtraBold.ttf in Resources */,
 				B7047FCA2AB4757D0032E5F5 /* OFL.txt in Resources */,
 				B70145DC2AAF315600BDD00B /* HomeVC.xib in Resources */,
+				B74F22222AC059820054AD27 /* DailyWaterVC.xib in Resources */,
 				B70145E12AAF3DAE00BDD00B /* HomeCell.xib in Resources */,
 				B7047FD12AB4757D0032E5F5 /* Poppins-Italic.ttf in Resources */,
 				B7047FCB2AB4757D0032E5F5 /* Poppins-Regular.ttf in Resources */,
@@ -569,20 +613,24 @@
 				B78923412ABD700900BCF581 /* AddingWaterVC.swift in Sources */,
 				B7657EE12AB044CC004300CB /* User.swift in Sources */,
 				B70145E52AAF42E800BDD00B /* HomeVM.swift in Sources */,
+				B74F222A2AC05D6C0054AD27 /* DailyWaterVM.swift in Sources */,
 				B7AA12D82ABAFD4A000A082A /* SecondSetupVM.swift in Sources */,
 				B789234E2ABD79B300BCF581 /* AddingWaterVMProtocols.swift in Sources */,
 				B7185BB12ABC2B24002E05BC /* ProfileVMProtocols.swift in Sources */,
+				B74F222C2AC05D730054AD27 /* DailyWaterVMProtocols.swift in Sources */,
 				B78923452ABD73FB00BCF581 /* AddingWaterCell.swift in Sources */,
 				B7AA12DA2ABAFD92000A082A /* SecondSetupVMProtocols.swift in Sources */,
 				B7AA12DC2ABB0294000A082A /* LastSetupVM.swift in Sources */,
 				B78923492ABD765F00BCF581 /* Water.swift in Sources */,
 				B7185BAF2ABC2B19002E05BC /* ProfileVM.swift in Sources */,
+				B74F22212AC059820054AD27 /* DailyWaterVC.swift in Sources */,
 				B70145C12AAF305F00BDD00B /* SceneDelegate.swift in Sources */,
 				B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */,
 				B789234C2ABD795800BCF581 /* AddingVaterVM.swift in Sources */,
 				B73EF9012AB48F8F0027A177 /* SecondSetupVC.swift in Sources */,
 				B7185BB72ABC7DFC002E05BC /* HomeVMProtocols.swift in Sources */,
 				B7AA12DE2ABB029D000A082A /* LastSetupVMProtocols.swift in Sources */,
+				B74F22262AC05C110054AD27 /* DailyWaterCell.swift in Sources */,
 				B7AA12D32ABACA02000A082A /* FirstSetupVMProtocols.swift in Sources */,
 				B7AA12D12ABAC6B8000A082A /* FirstSetupVM.swift in Sources */,
 				B7AA12D62ABAD886000A082A /* UIViewController + Extensions.swift in Sources */,

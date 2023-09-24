@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 struct User {
-    let name: String?
+    let name: String
     let weight: String
-    let id: UUID?
-    let gender: Bool?
+    let id: UUID
+    let gender: Bool
 }
