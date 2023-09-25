@@ -12,6 +12,7 @@ protocol HomeVMProtocol {
     var delegate: HomeVMDelegate? { get set }
 
     func getWaterData()
+    func getDailyWaterData()
 }
 
 protocol HomeVMDelegate: AnyObject {
@@ -20,5 +21,6 @@ protocol HomeVMDelegate: AnyObject {
 
 enum HomeVMOutput {
     case getWaterDataSuccess(water: [AddingWater])
+    case getDailyWaterDataSuccess(water: [Daily])
     case getWaterDataError
 }

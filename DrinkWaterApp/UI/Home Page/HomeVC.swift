@@ -12,10 +12,12 @@ class HomeVC: UIViewController {
     
     private var viewModel: HomeVMProtocol!
     private var water = [AddingWater]()
+    private var dailyWater = [Daily]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
+        viewModel.getDailyWaterData()
         
         let homeCell = UINib(nibName: "HomeCell", bundle: nil)
         tableView.register(homeCell, forCellReuseIdentifier: "homeCell")
@@ -43,6 +45,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeCell
+        let dailyWaterData = dailyWater[indexPath.row]
+        cell.selectionStyle = .none
+        cell.configure(dailyWaterData: dailyWaterData)
         return cell
     }
     
@@ -56,6 +61,8 @@ extension HomeVC: HomeVMDelegate {
             tableView.reloadData()
         case .getWaterDataError:
             showAlert(title: "Hata", message: "Veri Yüklenemedi")
+        case .getDailyWaterDataSuccess(water: let dailyWater):
+            self.dailyWater = dailyWater
         }
     }
     

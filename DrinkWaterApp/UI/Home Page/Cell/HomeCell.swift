@@ -10,11 +10,10 @@ import UIKit
 
 class HomeCell: UITableViewCell {
     @IBOutlet private weak var cellView: UIView!
-    @IBOutlet weak var targetWaterLabel: UILabel!
+    @IBOutlet private weak var targetWaterLabel: UILabel!
     
-    
-    func configure() {
-        
+    func configure(dailyWaterData: Daily) {
+        targetWaterLabel.text = dailyWaterData.ml
     }
     
 }

@@ -13,6 +13,7 @@ class HomeVM {
     weak var delegate: HomeVMDelegate?
     
     private var water = [AddingWater]()
+    private var dailyWater = [Daily]()
 }
 
 extension HomeVM: HomeVMProtocol {
@@ -22,7 +23,15 @@ extension HomeVM: HomeVMProtocol {
             delegate?.handleVMOutput(.getWaterDataSuccess(water: water))
         } else {
             delegate?.handleVMOutput(.getWaterDataError)
-        }    }
+        }
+    }
     
-    
+    func getDailyWaterData() {
+        if let dailyWater = CoreDataManager.shared.getDailyWaterData() {
+            self.dailyWater = dailyWater
+            delegate?.handleVMOutput(.getDailyWaterDataSuccess(water: dailyWater))
+        } else {
+            delegate?.handleVMOutput(.getWaterDataError)
+        }
+    }
 }

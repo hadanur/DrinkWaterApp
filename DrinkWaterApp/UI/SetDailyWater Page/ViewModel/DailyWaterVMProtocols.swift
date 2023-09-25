@@ -11,7 +11,7 @@ import UIKit
 protocol DailyWaterVMProtocol {
     var delegate: DailyWaterVMDelegate? { get set }
     
-    func addDailyWaterMl()
+    func addDailyWaterMl(ml: String)
 }
 
 protocol DailyWaterVMDelegate: AnyObject {

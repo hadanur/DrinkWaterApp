@@ -136,4 +136,63 @@ class CoreDataManager {
             print("error")
         }
     }
+    
+    func DailyWaterCalculate(ml: String) -> Bool {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let dailyWater = NSEntityDescription.insertNewObject(forEntityName: "DailyWater", into: context)
+        
+        dailyWater.setValue(UUID(), forKey: "id")
+        dailyWater.setValue(ml, forKey: "ml")
+        do {
+            try context.save()
+            return true
+        } catch {
+            print("Hata")
+            return false
+        }
+    }
+    
+    func dailyWaterReset() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DailyWater")
+        
+        if let results = try? context.fetch(fetchRequest) {
+            for result in results {
+                context.delete(result as! NSManagedObject)
+            }
+        }
+        do {
+            try context.save()
+        } catch {
+            print("error")
+        }
+    }
+    
+    func getDailyWaterData() -> [Daily]?  {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DailyWater")
+        
+        var dailyWater = [Daily]()
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            
+            for result in results as! [NSManagedObject] {
+                if let ml = result.value(forKey: "ml") as? String,
+                   let id = result.value(forKey: "id") as? UUID {
+                    let ml = Daily(ml: ml, id: id)
+                    dailyWater.append(ml)
+                }
+            }
+            return dailyWater
+        } catch {
+            print("error")
+            return nil
+        }
+        
+    }
 }

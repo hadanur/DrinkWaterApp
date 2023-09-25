@@ -55,14 +55,11 @@ extension LastSetupVC: LastSetupVMDelegate {
     func handleVMOutput(_ output: LastSetupVMOutput) {
         switch output {
         case .saveWeightSuccess:
-            navigationController?.pushViewController(TabBar(), animated: true)
-            navigationController?.navigationItem.setHidesBackButton(true, animated: true)
-            UserDefaults.standard.set("opened", forKey: "isFirstOpen")
-            navigationController?.navigationBar.isHidden = true
+            navigationController?.pushViewController(DailyWaterVC.create(), animated: true)
+            navigationItem.backButtonDisplayMode = .minimal
         case .saveWeightError:
             showAlert(title: "Hata", message: "Kilo Kaydedilemedi")
         }
     }
-    
     
 }
