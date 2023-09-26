@@ -64,5 +64,4 @@ extension AddingWaterVC: AddingWaterCellDelegate {
     func emptyInputsError() {
         showAlert(title: "Hata", message: "Veri Kaydedilemedi")
     }
-    
 }

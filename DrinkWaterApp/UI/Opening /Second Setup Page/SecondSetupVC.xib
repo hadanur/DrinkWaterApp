@@ -33,18 +33,18 @@
                         <constraint firstAttribute="width" constant="196" id="QX3-3j-HIw"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cinsiyetinizi seçin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-PI-ODP">
-                    <rect key="frame" x="128" y="134" width="149" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cinsiyetinizi seçin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-PI-ODP">
+                    <rect key="frame" x="110" y="134" width="194" height="24"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                     <color key="textColor" red="0.12941176470588234" green="0.21568627450980393" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ3-oP-517">
-                    <rect key="frame" x="44" y="670" width="327" height="52"/>
+                    <rect key="frame" x="44" y="560" width="327" height="52"/>
                     <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="327" id="E54-Wu-x7d"/>
-                        <constraint firstAttribute="height" constant="52" id="XYj-pj-u0R"/>
+                        <constraint firstAttribute="width" constant="327" id="X4L-s6-sS3"/>
+                        <constraint firstAttribute="height" constant="52" id="frY-7p-NPv"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -54,7 +54,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-zQ-jIl">
-                    <rect key="frame" x="237" y="236" width="152" height="278"/>
+                    <rect key="frame" x="237" y="221" width="152" height="278"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erkek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Az-RC-tzp">
                             <rect key="frame" x="35" y="219" width="82" height="24"/>
@@ -83,7 +83,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eat-Xd-Dgb">
-                    <rect key="frame" x="25" y="236" width="152" height="278"/>
+                    <rect key="frame" x="25" y="221" width="152" height="278"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kadın" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cg7-n2-vNB">
                             <rect key="frame" x="35" y="219" width="82" height="24"/>
@@ -115,20 +115,19 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rQ3-oP-517" secondAttribute="trailing" constant="43" id="3xa-WC-Tft"/>
-                <constraint firstItem="rQ3-oP-517" firstAttribute="top" secondItem="Eat-Xd-Dgb" secondAttribute="bottom" constant="156" id="43P-8P-zlj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jg0-PI-ODP" secondAttribute="trailing" constant="137" id="C78-rl-xX3"/>
+                <constraint firstItem="Jg0-PI-ODP" firstAttribute="top" secondItem="bUm-qK-08r" secondAttribute="bottom" constant="57" id="36x-Wd-e5c"/>
+                <constraint firstItem="rQ3-oP-517" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="3sA-RO-gix"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rQ3-oP-517" secondAttribute="trailing" constant="43" id="894-GK-Mad"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jg0-PI-ODP" secondAttribute="trailing" constant="110" id="C78-rl-xX3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dTH-zQ-jIl" secondAttribute="trailing" constant="25" id="FH1-tc-NwE"/>
-                <constraint firstItem="Jg0-PI-ODP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="128" id="I4R-p5-W9a"/>
-                <constraint firstItem="dTH-zQ-jIl" firstAttribute="top" secondItem="Jg0-PI-ODP" secondAttribute="bottom" constant="78" id="Kc6-xa-NMW"/>
-                <constraint firstItem="Eat-Xd-Dgb" firstAttribute="top" secondItem="Jg0-PI-ODP" secondAttribute="bottom" constant="78" id="Uo4-4Q-7OZ"/>
+                <constraint firstItem="Jg0-PI-ODP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="110" id="I4R-p5-W9a"/>
+                <constraint firstItem="dTH-zQ-jIl" firstAttribute="top" secondItem="Jg0-PI-ODP" secondAttribute="bottom" constant="63" id="Kc6-xa-NMW"/>
+                <constraint firstItem="Eat-Xd-Dgb" firstAttribute="top" secondItem="Jg0-PI-ODP" secondAttribute="bottom" constant="63" id="Uo4-4Q-7OZ"/>
                 <constraint firstItem="Eat-Xd-Dgb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Ysq-Yn-EXx"/>
-                <constraint firstItem="rQ3-oP-517" firstAttribute="top" secondItem="dTH-zQ-jIl" secondAttribute="bottom" constant="156" id="hzf-xQ-iJs"/>
                 <constraint firstItem="bUm-qK-08r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="104" id="k7h-d6-ukf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rQ3-oP-517" secondAttribute="bottom" constant="140" id="oqO-RN-dXE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bUm-qK-08r" secondAttribute="trailing" constant="114" id="oy9-y7-1W1"/>
+                <constraint firstItem="rQ3-oP-517" firstAttribute="top" secondItem="dTH-zQ-jIl" secondAttribute="bottom" constant="61" id="qtG-BN-q2U"/>
                 <constraint firstItem="bUm-qK-08r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wAQ-2M-jcM"/>
-                <constraint firstItem="rQ3-oP-517" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="z5K-CQ-saG"/>
             </constraints>
             <point key="canvasLocation" x="115.94202898550725" y="19.419642857142858"/>
         </view>

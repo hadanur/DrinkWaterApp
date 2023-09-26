@@ -11,6 +11,7 @@ protocol ProfileVMProtocol {
     var delegate: ProfileVMDelegate? { get set }
     
     func getUserData()
+    func getWaterData()
 }
 
 protocol ProfileVMDelegate: AnyObject {
@@ -18,6 +19,7 @@ protocol ProfileVMDelegate: AnyObject {
 }
 
 enum ProfileVMOutput {
-    case fetchDataSuccess(profile: [User])
+    case fetchUserDataSuccess(profile: [User])
     case fetchDataError
+    case fetchWaterDataSuccess(water: [AddingWater])
 }

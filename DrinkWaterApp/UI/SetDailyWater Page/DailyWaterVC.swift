@@ -17,6 +17,28 @@ class DailyWaterVC: UIViewController {
         
         let dailyWaterCell = UINib(nibName: "DailyWaterCell", bundle: nil)
         tableView.register(dailyWaterCell, forCellReuseIdentifier: "dailyWaterCell")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(setPopUpNavBar),
+                                               name: NSNotification.Name(rawValue: "setPopUpNavBar"),
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(resetPopUpNavBar),
+                                               name: NSNotification.Name(rawValue: "resetPopUpNavBar"),
+                                               object: nil)
+    }
+    
+    @objc private func setPopUpNavBar() {
+        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+        let statusBarColor = UIColor.opaqueSeparator
+        statusBarView.backgroundColor = statusBarColor
+        view.addSubview(statusBarView)
+    }
+    
+    @objc private func resetPopUpNavBar() {
+        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+        let statusBarColor = UIColor.systemBackground
+        statusBarView.backgroundColor = statusBarColor
+        view.addSubview(statusBarView)
     }
 
 }

@@ -106,7 +106,7 @@ class CoreDataManager {
             let results = try context.fetch(fetchRequest)
             
             for result in results as! [NSManagedObject] {
-                if let water = result.value(forKey: "water") as? String,
+                if let water = result.value(forKey: "water") as? Int,
                    let id = result.value(forKey: "id") as? UUID {
                     let water = AddingWater(water: water, id: id)
                     waterData.append(water)

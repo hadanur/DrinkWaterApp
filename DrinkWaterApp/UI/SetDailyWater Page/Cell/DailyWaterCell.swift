@@ -15,11 +15,13 @@ protocol DailyWaterCellDelegate: AnyObject {
 
 class DailyWaterCell: UITableViewCell {
     @IBOutlet private weak var dailyWaterView: UIView!
-    @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var saveButton: UIButton!
-    @IBOutlet private weak var setMlView: UIView!
     @IBOutlet private weak var mlLabel: UILabel!
-    @IBOutlet private weak var selectButton: UIButton!
+    @IBOutlet private weak var popUpView: UIView!
+    @IBOutlet private weak var changeMlButton: UIButton!
+    @IBOutlet private weak var popUpChangeButton: UIButton!
+    @IBOutlet private weak var popUpContinueButton: UIButton!
+    @IBOutlet private weak var popUpTextView: UITextView!
     
     weak var delegate: DailyWaterCellDelegate?
     
@@ -28,27 +30,37 @@ class DailyWaterCell: UITableViewCell {
     }
     
     @IBAction private func saveButtonTapped(_ sender: Any) {
-        guard let ml = textView.text else { delegate?.emptyInputsError(); return }
-        
-        if textView.text != "" {
+        guard let ml = mlLabel.text else { delegate?.emptyInputsError(); return }
             delegate?.saveButtonTapped(ml: ml)
-        } else {
-            delegate?.emptyInputsError()
-        }
+        
     }
     
-    @IBAction func recommendedWaterTapped(_ sender: Any) {
-        guard let ml = mlLabel.text else { delegate?.emptyInputsError(); return }
-        delegate?.saveButtonTapped(ml: ml)
+    @IBAction private func changeMlButtonTapped(_ sender: Any) {
+        popUpView.isHidden = false
+        dailyWaterView.backgroundColor = .opaqueSeparator
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setPopUpNavBar"), object: nil)
+    }
+
+    @IBAction private func popUpContinueButtonTapped(_ sender: Any) {
+        mlLabel.text = popUpTextView.text + " ml"
+        dailyWaterView.backgroundColor = .systemBackground
+        popUpView.isHidden = true
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "resetPopUpNavBar"), object: nil)
+    }
+    
+    @IBAction private func popUpChangeButtonTapped(_ sender: Any) {
+        dailyWaterView.backgroundColor = .systemBackground
+        popUpView.isHidden = true
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "resetPopUpNavBar"), object: nil)
     }
     
     private func commonInit() {
-        textView.layer.cornerRadius = 24
-        textView.layer.shadowRadius = 4
-        textView.clipsToBounds = false
-        textView.layer.shadowOpacity = 0.4
-        textView.layer.shadowOffset = CGSizeMake(2, 2)
-        textView.layer.shadowColor = UIColor.link.cgColor
+        popUpTextView.layer.cornerRadius = 24
+        popUpTextView.layer.shadowRadius = 4
+        popUpTextView.clipsToBounds = false
+        popUpTextView.layer.shadowOpacity = 0.4
+        popUpTextView.layer.shadowOffset = CGSizeMake(2, 2)
+        popUpTextView.layer.shadowColor = UIColor.link.cgColor
         
         saveButton.layer.cornerRadius = 22
         saveButton.clipsToBounds = false
@@ -56,16 +68,37 @@ class DailyWaterCell: UITableViewCell {
         saveButton.layer.shadowOffset = CGSizeMake(1, 2)
         saveButton.layer.shadowColor = UIColor.link.cgColor
         
-        setMlView.layer.cornerRadius = 20
-        setMlView.clipsToBounds = false
-        setMlView.layer.shadowOpacity = 0.4
-        setMlView.layer.shadowOffset = CGSizeMake(1, 2)
-        setMlView.layer.shadowColor = UIColor.link.cgColor
+        changeMlButton.layer.cornerRadius = 22
+        changeMlButton.clipsToBounds = false
+        changeMlButton.layer.shadowOpacity = 0.4
+        changeMlButton.layer.shadowOffset = CGSizeMake(1, 2)
+        changeMlButton.layer.shadowColor = UIColor.link.cgColor
         
-        selectButton.layer.cornerRadius = 22
-        selectButton.clipsToBounds = false
-        selectButton.layer.shadowOpacity = 0.4
-        selectButton.layer.shadowOffset = CGSizeMake(1, 2)
-        selectButton.layer.shadowColor = UIColor.link.cgColor
+        popUpChangeButton.layer.cornerRadius = 22
+        popUpChangeButton.clipsToBounds = false
+        popUpChangeButton.layer.shadowOpacity = 0.4
+        popUpChangeButton.layer.shadowOffset = CGSizeMake(1, 2)
+        popUpChangeButton.layer.shadowColor = UIColor.link.cgColor
+        
+        popUpContinueButton.layer.cornerRadius = 22
+        popUpContinueButton.clipsToBounds = false
+        popUpContinueButton.layer.shadowOpacity = 0.4
+        popUpContinueButton.layer.shadowOffset = CGSizeMake(1, 2)
+        popUpContinueButton.layer.shadowColor = UIColor.link.cgColor
+        
+        popUpView.layer.cornerRadius = 22
+        popUpView.clipsToBounds = false
+        popUpView.layer.shadowOpacity = 0.4
+        popUpView.layer.shadowOffset = CGSizeMake(1, 2)
+        popUpView.layer.shadowColor = UIColor.link.cgColor
+        
+        popUpTextView.layer.cornerRadius = 24
+        popUpTextView.layer.shadowRadius = 4
+        popUpTextView.clipsToBounds = false
+        popUpTextView.layer.shadowOpacity = 0.4
+        popUpTextView.layer.shadowOffset = CGSizeMake(2, 2)
+        popUpTextView.layer.shadowColor = UIColor.link.cgColor
+        
+        popUpView.isHidden = true
     }
 }

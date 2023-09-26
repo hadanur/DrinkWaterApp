@@ -12,17 +12,18 @@ class ProfileVC: UIViewController {
     
     private var viewModel: ProfileVMProtocol!
     private var profile = [User]()
+    private var water = [AddingWater]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewModel.delegate = self
         viewModel.getUserData()
+        viewModel.getWaterData()
         
         let profileCell = UINib(nibName: "ProfileCell", bundle: nil)
         tableView.register(profileCell, forCellReuseIdentifier: "profileCell")
     }
-
 }
 
 extension ProfileVC {
@@ -40,8 +41,16 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as! ProfileCell
-        let data = profile[indexPath.row]
-        cell.configure(data: data)
+        let userData = profile[indexPath.row]
+        cell.configure(userData: userData)
+        
+        var waterSum = 0
+        var index = 0
+        while index < water.count {
+            waterSum += water[index].water
+            index += 1
+        }
+        cell.drinkedWaterLabel.text = "\(waterSum)" + " Ml"
         return cell
     }
 }
@@ -49,11 +58,14 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
 extension ProfileVC: ProfileVMDelegate {
     func handleVMOutput(_ output: ProfileVMOutput) {
         switch output {
-        case .fetchDataSuccess(let profile):
+        case .fetchUserDataSuccess(let profile):
             self.profile = profile
             tableView.reloadData()
         case .fetchDataError:
             showAlert(title: "Hata", message: "Profil Yüklenemedi")
+        case .fetchWaterDataSuccess(water: let water):
+            self.water = water
+            tableView.reloadData()
         }
     }
     
