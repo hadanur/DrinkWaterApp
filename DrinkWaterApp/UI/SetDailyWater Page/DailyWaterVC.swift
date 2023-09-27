@@ -72,6 +72,8 @@ extension DailyWaterVC: DailyWaterVMDelegate {
             navigationController?.pushViewController(TabBar(), animated: true)
             navigationController?.navigationItem.setHidesBackButton(true, animated: true)
             UserDefaults.standard.set("opened", forKey: "isFirstOpen")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProfileTableView"), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadHomeTableView"), object: nil)
             navigationController?.navigationBar.isHidden = true
         case .SaveDailyWaterMlError:
             showAlert(title: "Hata", message: "Veri Kaydedilemedi")

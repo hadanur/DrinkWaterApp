@@ -23,6 +23,14 @@ class HomeVC: UIViewController {
         tableView.register(homeCell, forCellReuseIdentifier: "homeCell")
       
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView),
+                                               name: NSNotification.Name(rawValue: "reloadHomeTableView"),
+                                               object: nil)
+    }
+    
+    @objc private func reloadTableView() {
+        tableView.reloadData()
     }
 
     @objc func addButtonTapped() {

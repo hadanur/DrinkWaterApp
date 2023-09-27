@@ -13,6 +13,7 @@ final class ProfileVM {
     
     private var user = [User]()
     private var water = [AddingWater]()
+    private var dailyWater = [Daily]()
 }
 
 extension ProfileVM: ProfileVMProtocol {
@@ -34,5 +35,17 @@ extension ProfileVM: ProfileVMProtocol {
         }
     }
     
+    func getDailyWaterData() {
+        if let daily = CoreDataManager.shared.getDailyWaterData() {
+            self.dailyWater = daily
+            delegate?.handleVMOutput(.fetchDailyWaterDataSuccess(daily: dailyWater))
+        } else {
+            delegate?.handleVMOutput(.fetchDataError)
+        }
+    }
     
+    func resetDailyWaterData() {
+        CoreDataManager.shared.dailyWaterReset()
+        delegate?.handleVMOutput(.DailyWaterReset)
+    }
 }

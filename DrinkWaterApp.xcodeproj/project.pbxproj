@@ -62,6 +62,8 @@
 		B7657EEB2AB055FE004300CB /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEA2AB055FE004300CB /* ProfileCell.xib */; };
 		B7657EEF2AB05822004300CB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EED2AB05822004300CB /* SettingsVC.swift */; };
 		B7657EF02AB05822004300CB /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7657EEE2AB05822004300CB /* SettingsVC.xib */; };
+		B765DC572AC4372300DE02D8 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B765DC552AC4372300DE02D8 /* LoadingVC.swift */; };
+		B765DC582AC4372300DE02D8 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B765DC562AC4372300DE02D8 /* LoadingVC.xib */; };
 		B78923412ABD700900BCF581 /* AddingWaterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B789233F2ABD700900BCF581 /* AddingWaterVC.swift */; };
 		B78923422ABD700900BCF581 /* AddingWaterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78923402ABD700900BCF581 /* AddingWaterVC.xib */; };
 		B78923452ABD73FB00BCF581 /* AddingWaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78923442ABD73FB00BCF581 /* AddingWaterCell.swift */; };
@@ -139,6 +141,8 @@
 		B7657EEA2AB055FE004300CB /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		B7657EED2AB05822004300CB /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		B7657EEE2AB05822004300CB /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		B765DC552AC4372300DE02D8 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		B765DC562AC4372300DE02D8 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
 		B789233F2ABD700900BCF581 /* AddingWaterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingWaterVC.swift; sourceTree = "<group>"; };
 		B78923402ABD700900BCF581 /* AddingWaterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddingWaterVC.xib; sourceTree = "<group>"; };
 		B78923442ABD73FB00BCF581 /* AddingWaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingWaterCell.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 		B70145E62AAF432300BDD00B /* Opening  */ = {
 			isa = PBXGroup;
 			children = (
+				B765DC542AC4371000DE02D8 /* Loading Page */,
 				B73EF8FB2AB482670027A177 /* Opening Page */,
 				B70145F02AAF509D00BDD00B /* First Setup Page */,
 				B73EF8FE2AB48F540027A177 /* Second Setup Page */,
@@ -468,6 +473,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B765DC542AC4371000DE02D8 /* Loading Page */ = {
+			isa = PBXGroup;
+			children = (
+				B765DC552AC4372300DE02D8 /* LoadingVC.swift */,
+				B765DC562AC4372300DE02D8 /* LoadingVC.xib */,
+			);
+			path = "Loading Page";
+			sourceTree = "<group>";
+		};
 		B789233E2ABD6FDE00BCF581 /* AddingWater Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +590,7 @@
 				B74F22282AC05C450054AD27 /* DailyWaterCell.xib in Resources */,
 				B70145F42AAF50E000BDD00B /* FirstSetupVC.xib in Resources */,
 				B7657EF02AB05822004300CB /* SettingsVC.xib in Resources */,
+				B765DC582AC4372300DE02D8 /* LoadingVC.xib in Resources */,
 				B7047FC12AB4757D0032E5F5 /* Poppins-ThinItalic.ttf in Resources */,
 				B7EA9D8F2AB2F62500727675 /* SettingsCell.xib in Resources */,
 				B7047FC92AB4757D0032E5F5 /* Poppins-BlackItalic.ttf in Resources */,
@@ -619,6 +634,7 @@
 				B70145E52AAF42E800BDD00B /* HomeVM.swift in Sources */,
 				B74F222A2AC05D6C0054AD27 /* DailyWaterVM.swift in Sources */,
 				B7AA12D82ABAFD4A000A082A /* SecondSetupVM.swift in Sources */,
+				B765DC572AC4372300DE02D8 /* LoadingVC.swift in Sources */,
 				B789234E2ABD79B300BCF581 /* AddingWaterVMProtocols.swift in Sources */,
 				B7185BB12ABC2B24002E05BC /* ProfileVMProtocols.swift in Sources */,
 				B74F222C2AC05D730054AD27 /* DailyWaterVMProtocols.swift in Sources */,

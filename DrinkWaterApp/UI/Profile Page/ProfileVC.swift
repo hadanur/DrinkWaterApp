@@ -13,6 +13,7 @@ class ProfileVC: UIViewController {
     private var viewModel: ProfileVMProtocol!
     private var profile = [User]()
     private var water = [AddingWater]()
+    private var dailyWater = [Daily]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,18 @@ class ProfileVC: UIViewController {
         viewModel.delegate = self
         viewModel.getUserData()
         viewModel.getWaterData()
+        viewModel.getDailyWaterData()
         
         let profileCell = UINib(nibName: "ProfileCell", bundle: nil)
         tableView.register(profileCell, forCellReuseIdentifier: "profileCell")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView),
+                                               name: NSNotification.Name(rawValue: "reloadProfileTableView"),
+                                               object: nil)
+    }
+    
+    @objc private func reloadTableView() {
+        tableView.reloadData()
     }
 }
 
@@ -42,7 +52,8 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as! ProfileCell
         let userData = profile[indexPath.row]
-        cell.configure(userData: userData)
+        let dailyWaterData = dailyWater[indexPath.row]
+        cell.configure(userData: userData, dailyWaterData: dailyWaterData)
         
         var waterSum = 0
         var index = 0
@@ -66,8 +77,15 @@ extension ProfileVC: ProfileVMDelegate {
         case .fetchWaterDataSuccess(water: let water):
             self.water = water
             tableView.reloadData()
+        case .fetchDailyWaterDataSuccess(daily: let daily):
+            self.dailyWater = daily
+            tableView.reloadData()
+        case .DailyWaterReset:
+            viewModel.resetDailyWaterData()
+            tableView.reloadData()
+            navigationController?.pushViewController(DailyWaterVC.create(), animated: true)
+            navigationController?.navigationBar.isHidden = true
         }
     }
-    
     
 }

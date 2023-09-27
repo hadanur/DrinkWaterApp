@@ -20,57 +20,107 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMi-aO-xQe">
-                    <rect key="frame" x="5" y="5" width="383" height="842"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="İsim" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a59-HV-BEw">
-                            <rect key="frame" x="170" y="80" width="151" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İsim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a59-HV-BEw">
+                            <rect key="frame" x="121" y="80" width="151" height="24"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kilo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-gd-gAx">
-                            <rect key="frame" x="180" y="201" width="141" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kilo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-gd-gAx">
+                            <rect key="frame" x="100" y="188" width="193" height="20"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cinsiyet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-fi-O0c">
-                            <rect key="frame" x="170" y="137" width="182" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cinsiyet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-fi-O0c">
+                            <rect key="frame" x="106" y="134" width="182" height="24"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="İçilen Su Miktarı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SU-Ow-0mC">
-                            <rect key="frame" x="126" y="378" width="130" height="24"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İçilen Su Miktarı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SU-Ow-0mC">
+                            <rect key="frame" x="100" y="372" width="193" height="24"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ml" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nay-1d-kwe">
-                            <rect key="frame" x="121" y="432" width="141" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ml" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nay-1d-kwe">
+                            <rect key="frame" x="100" y="416" width="193" height="20"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Günlük İçilmesi Gereken Su Miktarı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54j-9L-Ofb">
+                            <rect key="frame" x="20" y="258" width="353" height="24"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                            <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ml" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjf-Wj-9Kf">
+                            <rect key="frame" x="100" y="302" width="193" height="20"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzo-18-JWC">
+                            <rect key="frame" x="33" y="506" width="327" height="52"/>
+                            <color key="backgroundColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="327" id="URk-fX-J2O"/>
+                                <constraint firstAttribute="height" constant="52" id="jQ3-Ve-xcR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Günlük Su Miktarını Değiştir"/>
+                            <connections>
+                                <action selector="changeDailyWaterButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="30Y-4B-q36"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="0SU-Ow-0mC" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="100" id="51z-f8-Ze8"/>
+                        <constraint firstItem="dnK-gd-gAx" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="100" id="AvV-sj-Opa"/>
+                        <constraint firstItem="yjf-Wj-9Kf" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="100" id="N59-si-hZh"/>
+                        <constraint firstAttribute="trailing" secondItem="a59-HV-BEw" secondAttribute="trailing" constant="121" id="Oy7-GU-mgV"/>
+                        <constraint firstAttribute="trailing" secondItem="jzo-18-JWC" secondAttribute="trailing" constant="33" id="QDv-nH-7da"/>
+                        <constraint firstAttribute="trailing" secondItem="54j-9L-Ofb" secondAttribute="trailing" constant="20" id="SUP-rv-z53"/>
+                        <constraint firstItem="blJ-fi-O0c" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="106" id="Tk7-Bt-DMh"/>
+                        <constraint firstAttribute="trailing" secondItem="blJ-fi-O0c" secondAttribute="trailing" constant="105" id="Vbx-p6-Btf"/>
+                        <constraint firstItem="54j-9L-Ofb" firstAttribute="top" secondItem="dnK-gd-gAx" secondAttribute="bottom" constant="50" id="WsG-Ag-KAf"/>
+                        <constraint firstAttribute="trailing" secondItem="yjf-Wj-9Kf" secondAttribute="trailing" constant="100" id="YXB-sh-g12"/>
+                        <constraint firstItem="dnK-gd-gAx" firstAttribute="top" secondItem="blJ-fi-O0c" secondAttribute="bottom" constant="30" id="ZMq-un-nLm"/>
+                        <constraint firstAttribute="trailing" secondItem="dnK-gd-gAx" secondAttribute="trailing" constant="100" id="aY9-Fh-WxO"/>
+                        <constraint firstItem="yjf-Wj-9Kf" firstAttribute="top" secondItem="54j-9L-Ofb" secondAttribute="bottom" constant="20" id="ate-HA-Re3"/>
+                        <constraint firstAttribute="trailing" secondItem="nay-1d-kwe" secondAttribute="trailing" constant="100" id="b6D-2g-ZHZ"/>
+                        <constraint firstItem="a59-HV-BEw" firstAttribute="top" secondItem="sMi-aO-xQe" secondAttribute="top" constant="80" id="c1O-mB-6dy"/>
+                        <constraint firstItem="nay-1d-kwe" firstAttribute="top" secondItem="0SU-Ow-0mC" secondAttribute="bottom" constant="20" id="eCx-vS-caJ"/>
+                        <constraint firstItem="0SU-Ow-0mC" firstAttribute="top" secondItem="yjf-Wj-9Kf" secondAttribute="bottom" constant="50" id="eKE-Xk-cw4"/>
+                        <constraint firstItem="jzo-18-JWC" firstAttribute="top" secondItem="nay-1d-kwe" secondAttribute="bottom" constant="70" id="g5b-Vy-k1f"/>
+                        <constraint firstItem="jzo-18-JWC" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="33" id="lbr-Vl-Mms"/>
+                        <constraint firstAttribute="trailing" secondItem="0SU-Ow-0mC" secondAttribute="trailing" constant="100" id="qDk-Ti-yfl"/>
+                        <constraint firstAttribute="bottom" secondItem="jzo-18-JWC" secondAttribute="bottom" constant="294" id="wNl-Zr-LEZ"/>
+                        <constraint firstItem="54j-9L-Ofb" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="20" id="wfy-Y7-oYU"/>
+                        <constraint firstItem="a59-HV-BEw" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="121" id="yCj-er-ZRv"/>
+                        <constraint firstItem="nay-1d-kwe" firstAttribute="leading" secondItem="sMi-aO-xQe" secondAttribute="leading" constant="100" id="yMQ-pG-0GN"/>
+                        <constraint firstItem="blJ-fi-O0c" firstAttribute="top" secondItem="a59-HV-BEw" secondAttribute="bottom" constant="30" id="yRt-uw-J6v"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="sMi-aO-xQe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="WSF-AR-F08"/>
-                <constraint firstItem="sMi-aO-xQe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="au2-bc-UQp"/>
-                <constraint firstAttribute="bottom" secondItem="sMi-aO-xQe" secondAttribute="bottom" constant="5" id="cKi-ft-6IM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sMi-aO-xQe" secondAttribute="trailing" constant="5" id="gOu-9f-BA2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sMi-aO-xQe" secondAttribute="trailing" id="Xq8-pm-zf2"/>
+                <constraint firstItem="sMi-aO-xQe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hs7-3r-gUo"/>
+                <constraint firstItem="sMi-aO-xQe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u4W-Tn-JXu"/>
+                <constraint firstAttribute="bottom" secondItem="sMi-aO-xQe" secondAttribute="bottom" id="u7o-lC-XeE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="changeDailyWaterButton" destination="jzo-18-JWC" id="gKs-j1-Smg"/>
+                <outlet property="dailyWaterMl" destination="yjf-Wj-9Kf" id="dyf-M0-u8J"/>
                 <outlet property="drinkedWaterLabel" destination="nay-1d-kwe" id="qJN-Km-pln"/>
                 <outlet property="genderLabel" destination="blJ-fi-O0c" id="XS3-eL-LKS"/>
                 <outlet property="nameLabel" destination="a59-HV-BEw" id="LJN-lk-4DO"/>

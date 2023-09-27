@@ -59,6 +59,7 @@ extension AddingWaterVC: AddingWaterVMDelegate {
 extension AddingWaterVC: AddingWaterCellDelegate {
     func saveButtonTapped(water: String) {
         viewModel.addWaterData(water: water)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProfileTableView"), object: nil)
     }
     
     func emptyInputsError() {

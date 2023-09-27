@@ -55,7 +55,7 @@ extension LastSetupVC: LastSetupVMDelegate {
     func handleVMOutput(_ output: LastSetupVMOutput) {
         switch output {
         case .saveWeightSuccess:
-            navigationController?.pushViewController(DailyWaterVC.create(), animated: true)
+            navigationController?.pushViewController(LoadingVC.create(), animated: true)
             navigationItem.backButtonDisplayMode = .minimal
         case .saveWeightError:
             showAlert(title: "Hata", message: "Kilo Kaydedilemedi")
