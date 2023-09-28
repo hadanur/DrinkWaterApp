@@ -20,47 +20,125 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F84-zu-lT9">
-                    <rect key="frame" x="5" y="5" width="383" height="808"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Günlük İçilmesi Gereken Su Miktarı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJM-2x-nc4">
-                            <rect key="frame" x="25" y="30" width="333" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarih" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJM-2x-nc4">
+                            <rect key="frame" x="30" y="30" width="333" height="24"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5600 Ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUd-5S-HrH">
-                            <rect key="frame" x="128" y="83" width="127" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2000 Ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUd-5S-HrH">
+                            <rect key="frame" x="133" y="67" width="127" height="24"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U52-sJ-YpT" userLabel="180mlButton">
+                            <rect key="frame" x="16" y="533" width="174" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <color key="tintColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="          180 Ml  " image="180">
+                                <color key="titleColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="blobButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="wjb-W4-Rdn"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyBottle" translatesAutoresizingMaskIntoConstraints="NO" id="L6f-wK-CNK">
+                            <rect key="frame" x="134" y="168" width="125" height="311"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f25-lQ-IvM">
+                            <rect key="frame" x="211" y="533" width="174" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <color key="tintColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="          200 Ml  " image="200">
+                                <color key="titleColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="180MlButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Qj-KG-4ru"/>
+                                <action selector="glassButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mh5-kw-Ezf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMU-Ng-zGo" userLabel="180mlButton">
+                            <rect key="frame" x="16" y="619" width="174" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <color key="tintColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="          330 Ml  " image="330">
+                                <color key="titleColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="bigGlassButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="nMp-XZ-T7f"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-ZD-F1T" userLabel="180mlButton">
+                            <rect key="frame" x="211" y="619" width="174" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <color key="tintColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="          500 Ml  " image="500">
+                                <color key="titleColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="bottleWaterButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="ow6-gM-RPB"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="QJM-2x-nc4" firstAttribute="leading" secondItem="F84-zu-lT9" secondAttribute="leading" constant="25" id="N66-9K-Q8j"/>
-                        <constraint firstItem="QJM-2x-nc4" firstAttribute="top" secondItem="F84-zu-lT9" secondAttribute="top" constant="30" id="T3d-Uj-NSm"/>
-                        <constraint firstAttribute="trailing" secondItem="QJM-2x-nc4" secondAttribute="trailing" constant="25" id="hUd-12-ipE"/>
+                        <constraint firstAttribute="trailing" secondItem="QJM-2x-nc4" secondAttribute="trailing" constant="30" id="GVP-75-4H3"/>
+                        <constraint firstItem="QJM-2x-nc4" firstAttribute="top" secondItem="F84-zu-lT9" secondAttribute="top" constant="30" id="HT2-96-XWX"/>
+                        <constraint firstItem="QJM-2x-nc4" firstAttribute="leading" secondItem="F84-zu-lT9" secondAttribute="leading" constant="30" id="diE-Ao-FWA"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="F84-zu-lT9" secondAttribute="bottom" constant="5" id="03P-7J-1vM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="F84-zu-lT9" secondAttribute="trailing" constant="5" id="75t-Yf-E5I"/>
-                <constraint firstItem="F84-zu-lT9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="ACk-jn-VZP"/>
-                <constraint firstItem="F84-zu-lT9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="FGz-dx-QIz"/>
+                <constraint firstItem="F84-zu-lT9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3dU-k5-Gs0"/>
+                <constraint firstItem="F84-zu-lT9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gzw-ua-0nn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="F84-zu-lT9" secondAttribute="trailing" id="pag-4O-LSa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="F84-zu-lT9" secondAttribute="bottom" id="yOM-r9-8Lm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bigGlassButton" destination="hMU-Ng-zGo" id="Jo6-E1-4bW"/>
+                <outlet property="blobButton" destination="U52-sJ-YpT" id="B48-lr-N8I"/>
+                <outlet property="bottleWaterButton" destination="Ib2-ZD-F1T" id="eVn-fy-4zg"/>
                 <outlet property="cellView" destination="F84-zu-lT9" id="OFR-Pu-wtS"/>
+                <outlet property="glassButton" destination="f25-lQ-IvM" id="O4s-xH-YtV"/>
                 <outlet property="targetWaterLabel" destination="fUd-5S-HrH" id="vWF-bh-bj9"/>
+                <outlet property="todayDateLabel" destination="QJM-2x-nc4" id="5mv-Ny-Yqs"/>
             </connections>
             <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="180" width="23" height="28"/>
+        <image name="200" width="26" height="26"/>
+        <image name="330" width="24" height="26"/>
+        <image name="500" width="21" height="30"/>
+        <image name="emptyBottle" width="140" height="326"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

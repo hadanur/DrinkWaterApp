@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol AddingWaterCellDelegate: AnyObject {
-    func saveButtonTapped(water: String)
+    func saveButtonTapped(water: Int)
     func emptyInputsError()
 }
 
@@ -36,7 +36,7 @@ class AddingWaterCell: UITableViewCell {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let water = textView.text else { delegate?.emptyInputsError(); return }
+        guard let water = Int(textView.text) else { delegate?.emptyInputsError(); return }
         
         if textView.text != "" {
             delegate?.saveButtonTapped(water: water)

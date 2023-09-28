@@ -19,14 +19,15 @@ class TabBar: UITabBarController {
         tabBar.tintColor = UIColor.link
            setupVCs()
         self.tabBarController?.navigationItem.hidesBackButton = true
+//        tabBar.backgroundColor = UIColor(red: 231.0/255.0, green: 240.0/255.0, blue: 255.0/255.0, alpha: 1)
 
     }
     
     func setupVCs() {
             viewControllers = [
-                createNavController(for: HomeVC.create(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "pencil")!),
-                createNavController(for: ProfileVC.create(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "pencil")!),
-                createNavController(for: SettingsVC.create(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "pencil")!)
+                createNavController(for: HomeVC.create(), title: NSLocalizedString("", comment: ""), image: UIImage(named: "timeline")!),
+                createNavController(for: ProfileVC.create(), title: NSLocalizedString("", comment: ""), image: UIImage(named: "stats")!),
+                createNavController(for: SettingsVC.create(), title: NSLocalizedString("", comment: ""), image: UIImage(named: "settings")!)
             ]
         }
     

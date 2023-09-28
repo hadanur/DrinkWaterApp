@@ -25,5 +25,4 @@ enum ProfileVMOutput {
     case fetchWaterDataSuccess(water: [AddingWater])
     case fetchDailyWaterDataSuccess(daily: [Daily])
     case fetchDataError
-    case DailyWaterReset
 }

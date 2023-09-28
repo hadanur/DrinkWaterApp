@@ -102,7 +102,7 @@
                                         <action selector="popUpChangeButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="IoT-nT-fxn"/>
                                     </connections>
                                 </button>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="200 " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="arv-Ac-Cby">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="arv-Ac-Cby">
                                     <rect key="frame" x="39" y="65" width="222" height="44"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>

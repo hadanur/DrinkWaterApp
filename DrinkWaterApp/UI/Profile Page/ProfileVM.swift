@@ -46,6 +46,5 @@ extension ProfileVM: ProfileVMProtocol {
     
     func resetDailyWaterData() {
         CoreDataManager.shared.dailyWaterReset()
-        delegate?.handleVMOutput(.DailyWaterReset)
     }
 }

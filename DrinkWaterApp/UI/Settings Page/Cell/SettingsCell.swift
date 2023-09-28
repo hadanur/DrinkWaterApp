@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsCell: UITableViewCell {
     @IBOutlet private weak var settingsView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var selectionLabel: UILabel!
     
     func configure() {
         

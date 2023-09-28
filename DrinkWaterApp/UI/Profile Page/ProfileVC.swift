@@ -53,6 +53,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as! ProfileCell
         let userData = profile[indexPath.row]
         let dailyWaterData = dailyWater[indexPath.row]
+        cell.delegate = self
         cell.configure(userData: userData, dailyWaterData: dailyWaterData)
         
         var waterSum = 0
@@ -80,12 +81,22 @@ extension ProfileVC: ProfileVMDelegate {
         case .fetchDailyWaterDataSuccess(daily: let daily):
             self.dailyWater = daily
             tableView.reloadData()
-        case .DailyWaterReset:
-            viewModel.resetDailyWaterData()
-            tableView.reloadData()
-            navigationController?.pushViewController(DailyWaterVC.create(), animated: true)
-            navigationController?.navigationBar.isHidden = true
         }
     }
+}
+
+extension ProfileVC: ProfileCellDelegate {
+    func resetDailyWaterSuccess() {
+        viewModel.resetDailyWaterData()
+        tableView.reloadData()
+        navigationController?.pushViewController(DailyWaterVC.create(), animated: true)
+        navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func resetDailyWaterError() {
+        showAlert(title: "Hata", message: "Profil Yüklenemedi")
+    }
+    
     
 }

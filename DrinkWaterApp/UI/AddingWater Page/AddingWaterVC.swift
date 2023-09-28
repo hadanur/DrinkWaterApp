@@ -49,6 +49,7 @@ extension AddingWaterVC: AddingWaterVMDelegate {
         switch output {
         case .saveDataSuccess:
             navigationController?.pushViewController(HomeVC.create(), animated: true)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProfileTableView"), object: nil)
             tableView.reloadData()
         case .saveDataError:
             showAlert(title: "Hata", message: "Veri Kaydedilemedi")
@@ -57,9 +58,8 @@ extension AddingWaterVC: AddingWaterVMDelegate {
 }
 
 extension AddingWaterVC: AddingWaterCellDelegate {
-    func saveButtonTapped(water: String) {
+    func saveButtonTapped(water: Int) {
         viewModel.addWaterData(water: water)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProfileTableView"), object: nil)
     }
     
     func emptyInputsError() {

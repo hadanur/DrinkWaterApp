@@ -11,7 +11,7 @@ import UIKit
 protocol AddingWaterVMProtocol {
     var delegate: AddingWaterVMDelegate? { get set }
     
-    func addWaterData(water: String)
+    func addWaterData(water: Int)
 }
 
 protocol AddingWaterVMDelegate: AnyObject {

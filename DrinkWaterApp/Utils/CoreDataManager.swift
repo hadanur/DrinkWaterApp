@@ -78,7 +78,7 @@ class CoreDataManager {
         }
     }
     
-    func addingWaterData(water: String) -> Bool {
+    func addingWaterData(water: Int) -> Bool {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         

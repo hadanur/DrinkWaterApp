@@ -54,6 +54,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell") as! HomeCell
         let dailyWaterData = dailyWater[indexPath.row]
+        cell.delegate = self
         cell.selectionStyle = .none
         cell.configure(dailyWaterData: dailyWaterData)
         return cell
@@ -72,6 +73,12 @@ extension HomeVC: HomeVMDelegate {
         case .getDailyWaterDataSuccess(water: let dailyWater):
             self.dailyWater = dailyWater
         }
+    }
+}
+
+extension HomeVC: HomeCellDelegate {
+    func toNavigateAddWaterVC() {
+        navigationController?.pushViewController(AddingWaterVC.create(), animated: true)
     }
     
     

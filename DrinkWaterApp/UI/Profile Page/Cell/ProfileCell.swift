@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+protocol ProfileCellDelegate: AnyObject {
+    func resetDailyWaterSuccess()
+    func resetDailyWaterError()
+}
+
 class ProfileCell: UITableViewCell {
     @IBOutlet private weak var profileView: UIView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -16,7 +21,8 @@ class ProfileCell: UITableViewCell {
     @IBOutlet weak var drinkedWaterLabel: UILabel!
     @IBOutlet private weak var dailyWaterMl: UILabel!
     @IBOutlet private weak var changeDailyWaterButton: UIButton!
-        
+    
+    weak var delegate: ProfileCellDelegate?
     
     func configure(userData: User, dailyWaterData: Daily) {
         nameLabel.text = userData.name
@@ -37,5 +43,6 @@ class ProfileCell: UITableViewCell {
     }
     
     @IBAction private func changeDailyWaterButtonTapped(_ sender: Any) {
+        delegate?.resetDailyWaterSuccess()
     }
 }

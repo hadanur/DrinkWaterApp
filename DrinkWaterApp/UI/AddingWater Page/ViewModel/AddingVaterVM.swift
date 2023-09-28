@@ -11,12 +11,12 @@ import UIKit
 class AddingWaterVM {
     weak var delegate: AddingWaterVMDelegate?
     
-    private var water = [AddWater]()
+    private var water = [AddingWater]()
 }
 
 extension AddingWaterVM: AddingWaterVMProtocol {
-    func addWaterData(water: String) {
-        if CoreDataManager.shared.addingWaterData(water: water) == true {
+    func addWaterData(water: Int) {
+        if CoreDataManager.shared.addingWaterData(water: water ) == true {
             delegate?.handleVMOutput(.saveDataSuccess)
         } else {
             delegate?.handleVMOutput(.saveDataError)
