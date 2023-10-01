@@ -11,6 +11,7 @@ import UIKit
 struct AddingWater {
     let water: Int
     let id : UUID
+    let date: Date
 }
 
 

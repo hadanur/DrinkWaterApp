@@ -58,8 +58,8 @@ extension AddingWaterVC: AddingWaterVMDelegate {
 }
 
 extension AddingWaterVC: AddingWaterCellDelegate {
-    func saveButtonTapped(water: Int) {
-        viewModel.addWaterData(water: water)
+    func saveButtonTapped(water: Int, date: Date) {
+        viewModel.addWaterData(water: water, date: date)
     }
     
     func emptyInputsError() {

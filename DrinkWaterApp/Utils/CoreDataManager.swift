@@ -78,13 +78,14 @@ class CoreDataManager {
         }
     }
     
-    func addingWaterData(water: Int) -> Bool {
+    func addingWaterData(water: Int, date: Date) -> Bool {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
         let addingWater = NSEntityDescription.insertNewObject(forEntityName: "AddWater", into: context)
         
         addingWater.setValue(UUID(), forKey: "id")
+        addingWater.setValue(date, forKey: "date")
         addingWater.setValue(water, forKey: "water")
         do {
             try context.save()
@@ -107,8 +108,9 @@ class CoreDataManager {
             
             for result in results as! [NSManagedObject] {
                 if let water = result.value(forKey: "water") as? Int,
+                   let date = result.value(forKey: "date") as? Date,
                    let id = result.value(forKey: "id") as? UUID {
-                    let water = AddingWater(water: water, id: id)
+                    let water = AddingWater(water: water, id: id, date: date)
                     waterData.append(water)
                 }
             }

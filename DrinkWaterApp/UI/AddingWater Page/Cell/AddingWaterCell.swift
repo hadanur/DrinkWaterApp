@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol AddingWaterCellDelegate: AnyObject {
-    func saveButtonTapped(water: Int)
+    func saveButtonTapped(water: Int, date: Date)
     func emptyInputsError()
 }
 
@@ -38,8 +38,15 @@ class AddingWaterCell: UITableViewCell {
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let water = Int(textView.text) else { delegate?.emptyInputsError(); return }
         
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateStyle = .long
+        formatter.string(from: currentDateTime)
+        
+        
         if textView.text != "" {
-            delegate?.saveButtonTapped(water: water)
+            delegate?.saveButtonTapped(water: water, date: currentDateTime)
         } else {
             delegate?.emptyInputsError()
         }
