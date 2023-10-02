@@ -65,5 +65,11 @@ class HomeCell: UITableViewCell {
         bigGlassButton.layer.shadowOpacity = 0.4
         bigGlassButton.layer.shadowOffset = CGSizeMake(1, 2)
         bigGlassButton.layer.shadowColor = UIColor.link.cgColor
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        todayDateLabel.text = dateFormatter.string(from: date)
     }
 }

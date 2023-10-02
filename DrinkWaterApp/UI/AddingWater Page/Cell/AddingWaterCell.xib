@@ -53,6 +53,16 @@
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Iy-hd-pi5">
+                            <rect key="frame" x="287" y="410" width="21" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="21" id="VR0-j2-H0Z"/>
+                                <constraint firstAttribute="height" constant="23" id="dl3-YU-fg0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                            <color key="textColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93205250849999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -60,8 +70,10 @@
                         <constraint firstAttribute="trailing" secondItem="u7u-3q-kG4" secondAttribute="trailing" constant="130" id="Kg6-yL-mER"/>
                         <constraint firstItem="Gle-rJ-EhU" firstAttribute="leading" secondItem="ERr-8B-XnZ" secondAttribute="leading" constant="59" id="R31-sG-KCG"/>
                         <constraint firstAttribute="bottom" secondItem="H6X-W8-hom" secondAttribute="bottom" constant="291" id="Udx-gL-9Mq"/>
+                        <constraint firstItem="8Iy-hd-pi5" firstAttribute="top" secondItem="ERr-8B-XnZ" secondAttribute="top" constant="410" id="axp-Rj-A4V"/>
                         <constraint firstItem="Gle-rJ-EhU" firstAttribute="top" secondItem="u7u-3q-kG4" secondAttribute="bottom" constant="15" id="c0M-U3-QJZ"/>
                         <constraint firstAttribute="trailing" secondItem="H6X-W8-hom" secondAttribute="trailing" constant="33" id="eJs-eN-YZ9"/>
+                        <constraint firstAttribute="trailing" secondItem="8Iy-hd-pi5" secondAttribute="trailing" constant="85" id="f83-dm-kZa"/>
                         <constraint firstAttribute="trailing" secondItem="Gle-rJ-EhU" secondAttribute="trailing" constant="60" id="jgQ-rB-L7f"/>
                         <constraint firstItem="u7u-3q-kG4" firstAttribute="leading" secondItem="ERr-8B-XnZ" secondAttribute="leading" constant="130" id="pHS-qD-84X"/>
                         <constraint firstItem="H6X-W8-hom" firstAttribute="top" secondItem="Gle-rJ-EhU" secondAttribute="bottom" constant="65" id="vrF-0z-1T8"/>
