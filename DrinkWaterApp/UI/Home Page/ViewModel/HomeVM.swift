@@ -26,6 +26,14 @@ extension HomeVM: HomeVMProtocol {
         }
     }
     
+    func addWaterData(water: Int, date: Date) {
+        if CoreDataManager.shared.addingWaterData(water: water, date: date ) == true {
+            delegate?.handleVMOutput(.saveDataSuccess)
+        } else {
+            delegate?.handleVMOutput(.saveDataError)
+        }
+    }
+    
     func getDailyWaterData() {
         if let dailyWater = CoreDataManager.shared.getDailyWaterData() {
             self.dailyWater = dailyWater
@@ -34,4 +42,5 @@ extension HomeVM: HomeVMProtocol {
             delegate?.handleVMOutput(.getWaterDataError)
         }
     }
+    
 }

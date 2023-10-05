@@ -10,6 +10,11 @@ import UIKit
 
 protocol HomeCellDelegate: AnyObject {
     func toNavigateAddWaterVC()
+    func saveGlassButtonTapped(water: Int, Date: Date)
+    func saveBlobButtonTapped(water: Int, Date: Date)
+    func saveBigGlassButtonTapped(water: Int, Date: Date)
+    func saveBottleWaterButtonTapped(water: Int, Date: Date)
+    func saveError()
 }
 
 class HomeCell: UITableViewCell {
@@ -20,24 +25,50 @@ class HomeCell: UITableViewCell {
     @IBOutlet private weak var blobButton: UIButton!
     @IBOutlet private weak var bigGlassButton: UIButton!
     @IBOutlet private weak var bottleWaterButton: UIButton!
+    @IBOutlet weak var todayDrinkedWaterLabel: UILabel!
     
     weak var delegate: HomeCellDelegate?
+        
+    let currentDateTime = Date()
+    let formatter = DateFormatter()
+
     
     func configure(dailyWaterData: Daily) {
         targetWaterLabel.text = dailyWaterData.ml
         commonInit()
     }
     
+    
+    
     @IBAction private func glassButtonTapped(_ sender: Any) {
+        formatter.timeStyle = .short
+        formatter.dateStyle = .long
+        formatter.string(from: currentDateTime)
         
+        delegate?.saveGlassButtonTapped(water: 200, Date: currentDateTime)
     }
     @IBAction private func blobButtonTapped(_ sender: Any) {
+        formatter.timeStyle = .short
+        formatter.dateStyle = .long
+        formatter.string(from: currentDateTime)
+        
+        delegate?.saveBlobButtonTapped(water: 180, Date: currentDateTime)
         
     }
     @IBAction private func bigGlassButtonTapped(_ sender: Any) {
+        formatter.timeStyle = .short
+        formatter.dateStyle = .long
+        formatter.string(from: currentDateTime)
+        
+        delegate?.saveBigGlassButtonTapped(water: 330, Date: currentDateTime)
     }
     
     @IBAction private func bottleWaterButtonTapped(_ sender: Any) {
+        formatter.timeStyle = .short
+        formatter.dateStyle = .long
+        formatter.string(from: currentDateTime)
+        
+        delegate?.saveBottleWaterButtonTapped(water: 500, Date: currentDateTime)
     }
     
     private func commonInit() {
@@ -66,10 +97,10 @@ class HomeCell: UITableViewCell {
         bigGlassButton.layer.shadowOffset = CGSizeMake(1, 2)
         bigGlassButton.layer.shadowColor = UIColor.link.cgColor
         
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
-        dateFormatter.timeStyle = .none
-        todayDateLabel.text = dateFormatter.string(from: date)
+        let todayDate = Date()
+        let todayDateFormatter = DateFormatter()
+        todayDateFormatter.dateStyle = .long
+        todayDateFormatter.timeStyle = .none
+        todayDateLabel.text = todayDateFormatter.string(from: todayDate)
     }
 }

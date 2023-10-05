@@ -18,6 +18,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.getDailyWaterData()
+        viewModel.getWaterData()
         
         let homeCell = UINib(nibName: "HomeCell", bundle: nil)
         tableView.register(homeCell, forCellReuseIdentifier: "homeCell")
@@ -56,6 +57,15 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let dailyWaterData = dailyWater[indexPath.row]
         cell.delegate = self
         cell.selectionStyle = .none
+        
+        var waterSum = 0
+        var index = 0
+        while index < water.count {
+            waterSum += water[index].water
+            index += 1
+        }
+        cell.todayDrinkedWaterLabel.text = "\(waterSum)" + " Ml"
+        
         cell.configure(dailyWaterData: dailyWaterData)
         return cell
     }
@@ -72,11 +82,35 @@ extension HomeVC: HomeVMDelegate {
             showAlert(title: "Hata", message: "Veri Yüklenemedi")
         case .getDailyWaterDataSuccess(water: let dailyWater):
             self.dailyWater = dailyWater
+        case.saveDataSuccess:
+            tableView.reloadData()
+        case .saveDataError:
+            showAlert(title: "Hata", message: "Veri Kaydedilemedi")
         }
     }
 }
 
 extension HomeVC: HomeCellDelegate {
+    func saveGlassButtonTapped(water: Int, Date: Date) {
+        viewModel.addWaterData(water: water, date: Date)
+    }
+    
+    func saveBlobButtonTapped(water: Int, Date: Date) {
+        viewModel.addWaterData(water: water, date: Date)
+    }
+    
+    func saveBigGlassButtonTapped(water: Int, Date: Date) {
+        viewModel.addWaterData(water: water, date: Date)
+    }
+    
+    func saveBottleWaterButtonTapped(water: Int, Date: Date) {
+        viewModel.addWaterData(water: water, date: Date)
+    }
+    
+    func saveError() {
+        showAlert(title: "Hata", message: "Veri Kaydedilemedi")
+    }
+    
     func toNavigateAddWaterVC() {
         navigationController?.pushViewController(AddingWaterVC.create(), animated: true)
     }

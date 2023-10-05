@@ -68,7 +68,6 @@
                                 <color key="titleShadowColor" red="0.33333333329999998" green="0.55294117649999996" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
-                                <action selector="180MlButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Qj-KG-4ru"/>
                                 <action selector="glassButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mh5-kw-Ezf"/>
                             </connections>
                         </button>
@@ -139,6 +138,7 @@
                         <constraint firstAttribute="trailing" secondItem="Ib2-ZD-F1T" secondAttribute="trailing" constant="10" id="BRb-T1-UZi"/>
                         <constraint firstItem="hMU-Ng-zGo" firstAttribute="leading" secondItem="F84-zu-lT9" secondAttribute="leading" constant="10" id="EJk-TG-nRq"/>
                         <constraint firstItem="L6f-wK-CNK" firstAttribute="leading" secondItem="F84-zu-lT9" secondAttribute="leading" constant="127" id="Ggz-N7-fBq"/>
+                        <constraint firstAttribute="bottom" secondItem="Ib2-ZD-F1T" secondAttribute="bottom" constant="188" id="JX5-ye-0Bk"/>
                         <constraint firstItem="L6f-wK-CNK" firstAttribute="top" secondItem="bu0-aW-1mB" secondAttribute="bottom" constant="70" id="ZZP-hO-bsc"/>
                         <constraint firstItem="QJM-2x-nc4" firstAttribute="top" secondItem="F84-zu-lT9" secondAttribute="top" constant="5" id="Zgc-H2-yxY"/>
                         <constraint firstItem="bu0-aW-1mB" firstAttribute="top" secondItem="QJM-2x-nc4" secondAttribute="bottom" constant="30" id="a5R-OP-ewU"/>
@@ -150,6 +150,7 @@
                         <constraint firstAttribute="trailing" secondItem="QJM-2x-nc4" secondAttribute="trailing" constant="21" id="jau-gR-oHM"/>
                         <constraint firstItem="U52-sJ-YpT" firstAttribute="top" secondItem="L6f-wK-CNK" secondAttribute="bottom" constant="50" id="kJ8-Xk-gGV"/>
                         <constraint firstItem="U52-sJ-YpT" firstAttribute="leading" secondItem="F84-zu-lT9" secondAttribute="leading" constant="10" id="s9H-vP-Qg3"/>
+                        <constraint firstAttribute="bottom" secondItem="hMU-Ng-zGo" secondAttribute="bottom" constant="188" id="vem-Cg-YwI"/>
                         <constraint firstAttribute="trailing" secondItem="f25-lQ-IvM" secondAttribute="trailing" constant="10" id="wEC-jS-O2d"/>
                     </constraints>
                 </view>
@@ -171,6 +172,7 @@
                 <outlet property="glassButton" destination="f25-lQ-IvM" id="O4s-xH-YtV"/>
                 <outlet property="targetWaterLabel" destination="fUd-5S-HrH" id="vWF-bh-bj9"/>
                 <outlet property="todayDateLabel" destination="QJM-2x-nc4" id="5mv-Ny-Yqs"/>
+                <outlet property="todayDrinkedWaterLabel" destination="VU3-IN-M3R" id="FNr-fD-cyV"/>
             </connections>
             <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
         </view>
