@@ -9,13 +9,15 @@ import UIKit
 
 class StatsVC: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
+    
     private var viewModel: StatsVMProtocol!
     private var water = [AddingWater]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        
         viewModel.getWaterData()
+        viewModel.delegate = self
         
         let statsCell = UINib(nibName: "StatsCell", bundle: nil)
         tableView.register(statsCell, forCellReuseIdentifier: "statsCell")

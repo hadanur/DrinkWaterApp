@@ -54,6 +54,9 @@
 		B74F22282AC05C450054AD27 /* DailyWaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B74F22272AC05C450054AD27 /* DailyWaterCell.xib */; };
 		B74F222A2AC05D6C0054AD27 /* DailyWaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F22292AC05D6C0054AD27 /* DailyWaterVM.swift */; };
 		B74F222C2AC05D730054AD27 /* DailyWaterVMProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F222B2AC05D730054AD27 /* DailyWaterVMProtocols.swift */; };
+		B7561F312AD5A111002A0166 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7561F302AD5A111002A0166 /* Constants.swift */; };
+		B7561F332AD5A230002A0166 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7561F322AD5A230002A0166 /* SettingsManager.swift */; };
+		B7561F362AD5A2C7002A0166 /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7561F352AD5A2C7002A0166 /* SettingsVM.swift */; };
 		B7657EDE2AB044AA004300CB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EDD2AB044AA004300CB /* CoreDataManager.swift */; };
 		B7657EE12AB044CC004300CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE02AB044CC004300CB /* User.swift */; };
 		B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE32AB04683004300CB /* ProfileVC.swift */; };
@@ -139,6 +142,9 @@
 		B74F22272AC05C450054AD27 /* DailyWaterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyWaterCell.xib; sourceTree = "<group>"; };
 		B74F22292AC05D6C0054AD27 /* DailyWaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterVM.swift; sourceTree = "<group>"; };
 		B74F222B2AC05D730054AD27 /* DailyWaterVMProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterVMProtocols.swift; sourceTree = "<group>"; };
+		B7561F302AD5A111002A0166 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B7561F322AD5A230002A0166 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		B7561F352AD5A2C7002A0166 /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
 		B7657EDD2AB044AA004300CB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B7657EE02AB044CC004300CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7657EE32AB04683004300CB /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 		B70145BD2AAF305F00BDD00B /* DrinkWaterApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7561F2F2AD5A0FB002A0166 /* Constants */,
 				B7AA12D42ABAD86D000A082A /* Extensions */,
 				B7657EDF2AB044BD004300CB /* Model */,
 				B7657EDC2AB04497004300CB /* Utils */,
@@ -428,10 +435,27 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B7561F2F2AD5A0FB002A0166 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B7561F302AD5A111002A0166 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B7561F342AD5A2BC002A0166 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7561F352AD5A2C7002A0166 /* SettingsVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B7657EDC2AB04497004300CB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				B7657EDD2AB044AA004300CB /* CoreDataManager.swift */,
+				B7561F322AD5A230002A0166 /* SettingsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -470,6 +494,7 @@
 		B7657EEC2AB057D4004300CB /* Settings Page */ = {
 			isa = PBXGroup;
 			children = (
+				B7561F342AD5A2BC002A0166 /* ViewModel */,
 				B7657EF12AB0586A004300CB /* Cell */,
 				B7657EED2AB05822004300CB /* SettingsVC.swift */,
 				B7657EEE2AB05822004300CB /* SettingsVC.xib */,
@@ -675,6 +700,7 @@
 				B7185BAD2ABC2883002E05BC /* TabBar.swift in Sources */,
 				B70145C92AAF305F00BDD00B /* DrinkWaterApp.xcdatamodeld in Sources */,
 				B78923412ABD700900BCF581 /* AddingWaterVC.swift in Sources */,
+				B7561F312AD5A111002A0166 /* Constants.swift in Sources */,
 				B7657EE12AB044CC004300CB /* User.swift in Sources */,
 				B70145E52AAF42E800BDD00B /* HomeVM.swift in Sources */,
 				B797E4232AC980D7002ECC2D /* StatsCell.swift in Sources */,
@@ -686,6 +712,7 @@
 				B74F222C2AC05D730054AD27 /* DailyWaterVMProtocols.swift in Sources */,
 				B78923452ABD73FB00BCF581 /* AddingWaterCell.swift in Sources */,
 				B7AA12DA2ABAFD92000A082A /* SecondSetupVMProtocols.swift in Sources */,
+				B7561F332AD5A230002A0166 /* SettingsManager.swift in Sources */,
 				B7AA12DC2ABB0294000A082A /* LastSetupVM.swift in Sources */,
 				B78923492ABD765F00BCF581 /* Water.swift in Sources */,
 				B7185BAF2ABC2B19002E05BC /* ProfileVM.swift in Sources */,
@@ -709,6 +736,7 @@
 				B7657EE92AB055F6004300CB /* ProfileCell.swift in Sources */,
 				B7EA9D8D2AB2F61A00727675 /* SettingsCell.swift in Sources */,
 				B7657EEF2AB05822004300CB /* SettingsVC.swift in Sources */,
+				B7561F362AD5A2C7002A0166 /* SettingsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

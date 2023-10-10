@@ -22,7 +22,7 @@ class HomeVC: UIViewController {
         
         let homeCell = UINib(nibName: "HomeCell", bundle: nil)
         tableView.register(homeCell, forCellReuseIdentifier: "homeCell")
-      
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView),
@@ -33,7 +33,7 @@ class HomeVC: UIViewController {
     @objc private func reloadTableView() {
         tableView.reloadData()
     }
-
+    
     @objc func addButtonTapped() {
         navigationController?.pushViewController(AddingWaterVC.create(), animated: true)
     }
@@ -92,19 +92,47 @@ extension HomeVC: HomeVMDelegate {
 
 extension HomeVC: HomeCellDelegate {
     func saveGlassButtonTapped(water: Int, Date: Date) {
-        viewModel.addWaterData(water: water, date: Date)
+        let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
+        let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
+            self.viewModel.addWaterData(water: water, date: Date)
+        }
+        let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
+        alertController.addAction(agreeButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true)
     }
     
     func saveBlobButtonTapped(water: Int, Date: Date) {
-        viewModel.addWaterData(water: water, date: Date)
+        let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
+        let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
+            self.viewModel.addWaterData(water: water, date: Date)
+        }
+        let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
+        alertController.addAction(agreeButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true)
     }
     
     func saveBigGlassButtonTapped(water: Int, Date: Date) {
-        viewModel.addWaterData(water: water, date: Date)
+        let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
+        let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
+            self.viewModel.addWaterData(water: water, date: Date)
+        }
+        let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
+        alertController.addAction(agreeButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true)
     }
     
     func saveBottleWaterButtonTapped(water: Int, Date: Date) {
-        viewModel.addWaterData(water: water, date: Date)
+        let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
+        let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
+            self.viewModel.addWaterData(water: water, date: Date)
+        }
+        let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
+        alertController.addAction(agreeButton)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true)
     }
     
     func saveError() {
@@ -114,6 +142,5 @@ extension HomeVC: HomeCellDelegate {
     func toNavigateAddWaterVC() {
         navigationController?.pushViewController(AddingWaterVC.create(), animated: true)
     }
-    
     
 }
