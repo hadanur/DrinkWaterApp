@@ -95,6 +95,7 @@ extension HomeVC: HomeCellDelegate {
         let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
         let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
             self.viewModel.addWaterData(water: water, date: Date)
+            self.tableView.reloadData()
         }
         let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
         alertController.addAction(agreeButton)
@@ -106,6 +107,7 @@ extension HomeVC: HomeCellDelegate {
         let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
         let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
             self.viewModel.addWaterData(water: water, date: Date)
+            self.tableView.reloadData()
         }
         let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
         alertController.addAction(agreeButton)
@@ -117,6 +119,7 @@ extension HomeVC: HomeCellDelegate {
         let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
         let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
             self.viewModel.addWaterData(water: water, date: Date)
+            self.tableView.reloadData()
         }
         let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
         alertController.addAction(agreeButton)
@@ -128,6 +131,7 @@ extension HomeVC: HomeCellDelegate {
         let alertController = UIAlertController(title: "Uyarı", message: "Veriyi Kaydetmek İstiyor Musunuz?", preferredStyle: UIAlertController.Style.actionSheet)
         let agreeButton = UIAlertAction(title: "Evet", style: .default) { action in
             self.viewModel.addWaterData(water: water, date: Date)
+            self.tableView.reloadData()
         }
         let cancelButton =  UIAlertAction(title: "Hayır", style: .destructive)
         alertController.addAction(agreeButton)

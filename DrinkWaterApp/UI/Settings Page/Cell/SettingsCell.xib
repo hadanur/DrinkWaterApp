@@ -16,37 +16,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingsCell" customModule="DrinkWaterApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-Rt-Bs7">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kM-h0-4vj">
-                            <rect key="frame" x="23" y="44" width="35" height="24"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kM-h0-4vj">
+                            <rect key="frame" x="15" y="25" width="35" height="30"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewK-Oa-EKi">
-                            <rect key="frame" x="325" y="43" width="78" height="24"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewK-Oa-EKi">
+                            <rect key="frame" x="321" y="25" width="78" height="30"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                             <color key="textColor" red="0.12941176469999999" green="0.2156862745" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ewK-Oa-EKi" secondAttribute="bottom" constant="25" id="3aI-kB-1rY"/>
+                        <constraint firstAttribute="trailing" secondItem="ewK-Oa-EKi" secondAttribute="trailing" constant="15" id="67q-61-RI4"/>
+                        <constraint firstItem="3kM-h0-4vj" firstAttribute="top" secondItem="pPC-Rt-Bs7" secondAttribute="top" constant="25" id="cie-tT-4s5"/>
+                        <constraint firstItem="3kM-h0-4vj" firstAttribute="leading" secondItem="pPC-Rt-Bs7" secondAttribute="leading" constant="15" id="fcD-xC-MgP"/>
+                        <constraint firstAttribute="bottom" secondItem="3kM-h0-4vj" secondAttribute="bottom" constant="25" id="pQv-jI-hWK"/>
+                        <constraint firstItem="ewK-Oa-EKi" firstAttribute="top" secondItem="pPC-Rt-Bs7" secondAttribute="top" constant="25" id="yZi-rz-fAg"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="pPC-Rt-Bs7" secondAttribute="bottom" id="2r6-sc-dQ6"/>
-                <constraint firstItem="pPC-Rt-Bs7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="PG1-hM-UEA"/>
-                <constraint firstItem="pPC-Rt-Bs7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dek-aE-ste"/>
-                <constraint firstItem="pPC-Rt-Bs7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vzE-zv-jYm"/>
+                <constraint firstItem="pPC-Rt-Bs7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YYc-FA-CN2"/>
+                <constraint firstItem="pPC-Rt-Bs7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ied-hx-vC1"/>
+                <constraint firstAttribute="trailing" secondItem="pPC-Rt-Bs7" secondAttribute="trailing" id="pUz-EP-Uig"/>
+                <constraint firstAttribute="bottom" secondItem="pPC-Rt-Bs7" secondAttribute="bottom" id="q6A-aR-uAt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

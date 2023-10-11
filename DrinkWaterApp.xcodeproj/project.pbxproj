@@ -57,6 +57,9 @@
 		B7561F312AD5A111002A0166 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7561F302AD5A111002A0166 /* Constants.swift */; };
 		B7561F332AD5A230002A0166 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7561F322AD5A230002A0166 /* SettingsManager.swift */; };
 		B7561F362AD5A2C7002A0166 /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7561F352AD5A2C7002A0166 /* SettingsVM.swift */; };
+		B758F1012AD6C0CB00894AF1 /* SettingsContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758F0FF2AD6C0CB00894AF1 /* SettingsContentVC.swift */; };
+		B758F1022AD6C0CB00894AF1 /* SettingsContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B758F1002AD6C0CB00894AF1 /* SettingsContentVC.xib */; };
+		B758F1042AD6C19D00894AF1 /* SettingsContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758F1032AD6C19D00894AF1 /* SettingsContentVM.swift */; };
 		B7657EDE2AB044AA004300CB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EDD2AB044AA004300CB /* CoreDataManager.swift */; };
 		B7657EE12AB044CC004300CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE02AB044CC004300CB /* User.swift */; };
 		B7657EE52AB04683004300CB /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7657EE32AB04683004300CB /* ProfileVC.swift */; };
@@ -145,6 +148,9 @@
 		B7561F302AD5A111002A0166 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B7561F322AD5A230002A0166 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		B7561F352AD5A2C7002A0166 /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
+		B758F0FF2AD6C0CB00894AF1 /* SettingsContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentVC.swift; sourceTree = "<group>"; };
+		B758F1002AD6C0CB00894AF1 /* SettingsContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsContentVC.xib; sourceTree = "<group>"; };
+		B758F1032AD6C19D00894AF1 /* SettingsContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentVM.swift; sourceTree = "<group>"; };
 		B7657EDD2AB044AA004300CB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B7657EE02AB044CC004300CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7657EE32AB04683004300CB /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -447,8 +453,18 @@
 			isa = PBXGroup;
 			children = (
 				B7561F352AD5A2C7002A0166 /* SettingsVM.swift */,
+				B758F1032AD6C19D00894AF1 /* SettingsContentVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B758F0FE2AD6C0B400894AF1 /* SettingsContent */ = {
+			isa = PBXGroup;
+			children = (
+				B758F0FF2AD6C0CB00894AF1 /* SettingsContentVC.swift */,
+				B758F1002AD6C0CB00894AF1 /* SettingsContentVC.xib */,
+			);
+			path = SettingsContent;
 			sourceTree = "<group>";
 		};
 		B7657EDC2AB04497004300CB /* Utils */ = {
@@ -494,6 +510,7 @@
 		B7657EEC2AB057D4004300CB /* Settings Page */ = {
 			isa = PBXGroup;
 			children = (
+				B758F0FE2AD6C0B400894AF1 /* SettingsContent */,
 				B7561F342AD5A2BC002A0166 /* ViewModel */,
 				B7657EF12AB0586A004300CB /* Cell */,
 				B7657EED2AB05822004300CB /* SettingsVC.swift */,
@@ -674,6 +691,7 @@
 				B70145CB2AAF306000BDD00B /* Assets.xcassets in Resources */,
 				B7047FC22AB4757D0032E5F5 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				B7047FD22AB4757D0032E5F5 /* Poppins-MediumItalic.ttf in Resources */,
+				B758F1022AD6C0CB00894AF1 /* SettingsContentVC.xib in Resources */,
 				B7047FD02AB4757D0032E5F5 /* Poppins-SemiBold.ttf in Resources */,
 				B7047FCD2AB4757D0032E5F5 /* Poppins-Bold.ttf in Resources */,
 				B7657EEB2AB055FE004300CB /* ProfileCell.xib in Resources */,
@@ -697,6 +715,7 @@
 				B70145DB2AAF315600BDD00B /* HomeVC.swift in Sources */,
 				B797E4282AC98146002ECC2D /* StatsVM.swift in Sources */,
 				B73EF8FD2AB4837E0027A177 /* OpeningVC.swift in Sources */,
+				B758F1012AD6C0CB00894AF1 /* SettingsContentVC.swift in Sources */,
 				B7185BAD2ABC2883002E05BC /* TabBar.swift in Sources */,
 				B70145C92AAF305F00BDD00B /* DrinkWaterApp.xcdatamodeld in Sources */,
 				B78923412ABD700900BCF581 /* AddingWaterVC.swift in Sources */,
@@ -726,6 +745,7 @@
 				B74F22262AC05C110054AD27 /* DailyWaterCell.swift in Sources */,
 				B797E42A2AC9815A002ECC2D /* StatsVMProtocols.swift in Sources */,
 				B7AA12D32ABACA02000A082A /* FirstSetupVMProtocols.swift in Sources */,
+				B758F1042AD6C19D00894AF1 /* SettingsContentVM.swift in Sources */,
 				B797E41F2AC98015002ECC2D /* StatsVC.swift in Sources */,
 				B7AA12D12ABAC6B8000A082A /* FirstSetupVM.swift in Sources */,
 				B7AA12D62ABAD886000A082A /* UIViewController + Extensions.swift in Sources */,

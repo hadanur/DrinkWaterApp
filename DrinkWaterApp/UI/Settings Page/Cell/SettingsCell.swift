@@ -13,8 +13,9 @@ class SettingsCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var selectionLabel: UILabel!
     
-    func configure() {
-        
+    func configure(title: String, selection: String) {
+        titleLabel.text = title
+        selectionLabel.text = selection
     }
     
 }
