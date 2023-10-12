@@ -34,6 +34,27 @@ class SettingsManager {
         }
     }
     
+    func setSelectedNotificationSoundStyle( sound: NotificationSound) {
+        UserDefaults.standard.set(sound.rawValue, forKey: Constants.notificationSoundKey)
+    }
+    
+    func getSelectedNotificationSoundStyle() -> NotificationSound {
+        guard let selectedSound = NotificationSound(rawValue: UserDefaults.standard.string(forKey: Constants.notificationSoundKey) ?? "") else {
+            setSelectedNotificationSoundStyle(sound: .appSound)
+            return NotificationSound.appSound
+        }
+        return selectedSound
+    }
+    
+    func getSelectedNotificationSoundName() -> String {
+        switch getSelectedNotificationSoundStyle() {
+        case .appSound:
+            return NotificationSound.appSound.rawValue
+        case .defaultSound:
+            return NotificationSound.defaultSound.rawValue
+        }
+    }
+    
 }
 
 enum NotificationType: String {
@@ -41,6 +62,15 @@ enum NotificationType: String {
     case off = "Kapalı"
     
     func getNotificationFullName(_ notificationType: NotificationType) -> String {
+        return self.rawValue
+    }
+}
+
+enum NotificationSound: String {
+    case appSound = "Uygulama Varsayılanı"
+    case defaultSound = "Sistem Varsayılanı"
+    
+    func getNotificationSoundFullName(_ notificationSound: NotificationSound) -> String {
         return self.rawValue
     }
 }

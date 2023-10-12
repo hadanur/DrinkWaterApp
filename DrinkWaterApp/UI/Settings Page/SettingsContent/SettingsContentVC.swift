@@ -9,11 +9,14 @@ import UIKit
 
 enum SettingsContent {
     case notificationStyle
+    case notificationSoundStyle
 
     func tableViewData() -> [String] {
         switch self {
         case.notificationStyle:
             return ["Açık", "Kapalı"]
+        case .notificationSoundStyle:
+            return ["Uygulama Varsayılanı", "Sistem Varsayılanı"]
         }
     }
 }
@@ -57,6 +60,13 @@ extension SettingsContentVC: UITableViewDelegate, UITableViewDataSource {
             } else {
                 viewModel.selectNotificationStyle(option: .off)
             }
+
+        case .some(.notificationSoundStyle):
+            if indexPath.row == 0 {
+                viewModel.selectNotificationSoundStyle(option: .appSound)
+            } else {
+                viewModel.selectNotificationSoundStyle(option: .defaultSound)
+            }
         case .none:
             break
         }
@@ -75,6 +85,11 @@ extension SettingsContentVC {
 }
 
 extension SettingsContentVC: SettingsContentVMDelegate {
+    func selectNotificationSoundStyle() {
+        navigationController?.popViewController(animated: true)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSettingsTableView"), object: nil)
+    }
+    
     func selectNotificationStyle() {
         navigationController?.popViewController(animated: true)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSettingsTableView"), object: nil)

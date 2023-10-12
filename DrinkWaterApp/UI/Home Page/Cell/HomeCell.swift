@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 protocol HomeCellDelegate: AnyObject {
-    func toNavigateAddWaterVC()
     func saveGlassButtonTapped(water: Int, Date: Date)
     func saveBlobButtonTapped(water: Int, Date: Date)
     func saveBigGlassButtonTapped(water: Int, Date: Date)

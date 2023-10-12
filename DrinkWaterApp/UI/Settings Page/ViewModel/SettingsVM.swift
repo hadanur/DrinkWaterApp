@@ -11,6 +11,7 @@ import UIKit
 class SettingsVM {
     let data = ["Günlük Hedeflenen Su Miktarı",
                 "Bildirimler",
+                "Bildirim Sesi",
                 "Uygulamayı Değerlendir",
                 "Diğer Uygulamalar",
                 "Sürüm"]

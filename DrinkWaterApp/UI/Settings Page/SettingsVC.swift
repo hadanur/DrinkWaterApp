@@ -44,17 +44,21 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell") as! SettingsCell
         let data = viewModel.data[indexPath.row]
         let selectedNotificationOption = SettingsManager.shared.getSelectedNotificationName()
+        let selectedNotificationSoundOption = SettingsManager.shared.getSelectedNotificationSoundName()
         
         if indexPath.row == 0 {
             cell.configure(title: data, selection: ">")
         } else if indexPath.row == 1 {
             cell.configure(title: data, selection: selectedNotificationOption)
         } else if indexPath.row == 2 {
-            cell.configure(title: data, selection: ">")
+            cell.configure(title: data, selection: selectedNotificationSoundOption)
         } else if indexPath.row == 3 {
+            cell.configure(title: data, selection: ">")
+        } else if indexPath.row == 4 {
             cell.configure(title: data, selection: ">")
         } else {
             cell.configure(title: data, selection: "v1.0")
+
         }
         return cell
     }
@@ -74,7 +78,9 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             let settingsContentVC = SettingsContentVC.create(vcTitle: data, content: settingsContent)
             navigationController?.pushViewController(settingsContentVC, animated: true)
         } else if indexPath.row == 2 {
-            
+            settingsContent = .notificationSoundStyle
+            let settingsContentVC = SettingsContentVC.create(vcTitle: data, content: settingsContent)
+            navigationController?.pushViewController(settingsContentVC, animated: true)
         } else if indexPath.row == 3 {
             
         }

@@ -23,8 +23,6 @@ class HomeVC: UIViewController {
         let homeCell = UINib(nibName: "HomeCell", bundle: nil)
         tableView.register(homeCell, forCellReuseIdentifier: "homeCell")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
-        
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView),
                                                name: NSNotification.Name(rawValue: "reloadHomeTableView"),
                                                object: nil)
@@ -32,10 +30,6 @@ class HomeVC: UIViewController {
     
     @objc private func reloadTableView() {
         tableView.reloadData()
-    }
-    
-    @objc func addButtonTapped() {
-        navigationController?.pushViewController(AddingWaterVC.create(), animated: true)
     }
 }
 
@@ -141,10 +135,6 @@ extension HomeVC: HomeCellDelegate {
     
     func saveError() {
         showAlert(title: "Hata", message: "Veri Kaydedilemedi")
-    }
-    
-    func toNavigateAddWaterVC() {
-        navigationController?.pushViewController(AddingWaterVC.create(), animated: true)
     }
     
 }

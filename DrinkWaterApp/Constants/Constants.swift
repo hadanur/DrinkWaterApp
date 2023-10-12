@@ -11,6 +11,7 @@ import UIKit
 struct Constants {
     static let dailyTargetWaterKey = "dailyTargetWater"
     static let notificationKey = "notification"
+    static let notificationSoundKey = "notificationSound"
     static let rateApplicationKey = "rateApplication"
     static let otherApplicationsKey = "otherApplications"
 }

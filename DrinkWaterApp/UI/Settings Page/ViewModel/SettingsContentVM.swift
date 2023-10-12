@@ -10,6 +10,7 @@ import UIKit
 
 protocol SettingsContentVMDelegate: AnyObject {
     func selectNotificationStyle()
+    func selectNotificationSoundStyle()
 }
 
 class SettingsContentVM {
@@ -18,5 +19,10 @@ class SettingsContentVM {
     func selectNotificationStyle(option: NotificationType) {
         SettingsManager.shared.setSelectedNotificationStyle(notificiation: option)
         delegate?.selectNotificationStyle()
+    }
+    
+    func selectNotificationSoundStyle(option: NotificationSound) {
+        SettingsManager.shared.setSelectedNotificationSoundStyle(sound: option)
+        delegate?.selectNotificationSoundStyle()
     }
 }
