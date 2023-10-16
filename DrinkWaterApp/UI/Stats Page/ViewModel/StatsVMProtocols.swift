@@ -19,7 +19,7 @@ protocol StatsVMDelegate: AnyObject {
 }
 
 enum StatsVMOutput {
-    case getWaterDataSuccess(water: [AddingWater])
+    case fetchWaterDataSuccess(water: [AddingWater])
     case getWaterDataError
 }
 

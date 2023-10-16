@@ -15,6 +15,8 @@ class StatsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         
         viewModel.getWaterData()
         viewModel.delegate = self
@@ -48,13 +50,11 @@ extension StatsVC: UITableViewDelegate, UITableViewDataSource {
 extension StatsVC : StatsVMDelegate {
     func handleVMOutput(_ output: StatsVMOutput) {
         switch output {
-        case .getWaterDataSuccess(let water):
+        case .fetchWaterDataSuccess(water: let water):
             self.water = water
             tableView.reloadData()
         case .getWaterDataError:
             showAlert(title: "Hata", message: "Veri Yüklenemedi")
         }
     }
-    
-    
 }

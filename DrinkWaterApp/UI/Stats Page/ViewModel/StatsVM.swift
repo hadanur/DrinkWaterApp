@@ -16,13 +16,11 @@ class StatsVM {
 
 extension StatsVM: StatsVMProtocol {
     func getWaterData() {
-        func getWaterData() {
-            if let water = CoreDataManager.shared.getWaterData() {
-                self.water = water
-                delegate?.handleVMOutput(.getWaterDataSuccess(water: water))
-            } else {
-                delegate?.handleVMOutput(.getWaterDataError)
-            }
+        if let addWater = CoreDataManager.shared.getWaterData() {
+            self.water = addWater
+            delegate?.handleVMOutput(.fetchWaterDataSuccess(water: water))
+        } else {
+            delegate?.handleVMOutput(.getWaterDataError)
         }
     }
     

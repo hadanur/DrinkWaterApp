@@ -58,8 +58,22 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             waterSum += water[index].water
             index += 1
         }
-        cell.todayDrinkedWaterLabel.text = "\(waterSum)" + " Ml"
         
+        switch waterSum {
+        case 0 ... 179:
+            cell.bottleImage.image = UIImage(named: "emptyBottle")
+        case 180 ... 499:
+            cell.bottleImage.image = UIImage(named: "minimumBottle")
+        case 500 ... 999:
+            cell.bottleImage.image = UIImage(named: "quarterBottle")
+        case 1000 ... 1499:
+            cell.bottleImage.image = UIImage(named: "halfBottle")
+        case 1500 ... 1999:
+            cell.bottleImage.image = UIImage(named: "halfPastBottle")
+        default:
+            cell.bottleImage.image = UIImage(named: "maximumBottle")
+        }
+        cell.todayDrinkedWaterLabel.text = "\(waterSum)" + " Ml"
         cell.configure(dailyWaterData: dailyWaterData)
         return cell
     }

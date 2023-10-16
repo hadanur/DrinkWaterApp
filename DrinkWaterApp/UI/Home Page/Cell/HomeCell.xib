@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -167,6 +168,7 @@
             <connections>
                 <outlet property="bigGlassButton" destination="hMU-Ng-zGo" id="Jo6-E1-4bW"/>
                 <outlet property="blobButton" destination="U52-sJ-YpT" id="B48-lr-N8I"/>
+                <outlet property="bottleImage" destination="L6f-wK-CNK" id="6ku-Pd-xIL"/>
                 <outlet property="bottleWaterButton" destination="Ib2-ZD-F1T" id="eVn-fy-4zg"/>
                 <outlet property="cellView" destination="F84-zu-lT9" id="OFR-Pu-wtS"/>
                 <outlet property="glassButton" destination="f25-lQ-IvM" id="O4s-xH-YtV"/>

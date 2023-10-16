@@ -24,6 +24,7 @@ class HomeCell: UITableViewCell {
     @IBOutlet private weak var blobButton: UIButton!
     @IBOutlet private weak var bigGlassButton: UIButton!
     @IBOutlet private weak var bottleWaterButton: UIButton!
+    @IBOutlet weak var bottleImage: UIImageView!
     @IBOutlet weak var todayDrinkedWaterLabel: UILabel!
     
     weak var delegate: HomeCellDelegate?
