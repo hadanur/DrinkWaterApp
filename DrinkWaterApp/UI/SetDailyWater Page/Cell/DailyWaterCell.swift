@@ -11,6 +11,8 @@ import UIKit
 protocol DailyWaterCellDelegate: AnyObject {
     func saveButtonTapped(ml: String)
     func emptyInputsError()
+    func changeMlButtonTapped()
+    func continueButtonTapped()
 }
 
 class DailyWaterCell: UITableViewCell {
@@ -38,6 +40,7 @@ class DailyWaterCell: UITableViewCell {
     @IBAction private func changeMlButtonTapped(_ sender: Any) {
         popUpView.isHidden = false
         dailyWaterView.backgroundColor = .opaqueSeparator
+        delegate?.changeMlButtonTapped()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setPopUpNavBar"), object: nil)
     }
 
@@ -45,11 +48,13 @@ class DailyWaterCell: UITableViewCell {
         mlLabel.text = popUpTextView.text + " ml"
         dailyWaterView.backgroundColor = .systemBackground
         popUpView.isHidden = true
+        delegate?.continueButtonTapped()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "resetPopUpNavBar"), object: nil)
     }
     
     @IBAction private func popUpChangeButtonTapped(_ sender: Any) {
         dailyWaterView.backgroundColor = .systemBackground
+        delegate?.continueButtonTapped()
         popUpView.isHidden = true
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "resetPopUpNavBar"), object: nil)
     }

@@ -18,9 +18,17 @@ extension UIViewController {
     
     func createNotification() {
         let content = UNMutableNotificationContent()
+        let notificationType = SettingsManager.shared.getSelectedNotificationSoundStyle()
+        
+        switch notificationType {
+        case .appSound:
+            content.sound = UNNotificationSound.default
+        case .defaultSound:
+            content.sound = UNNotificationSound.default
+        }
+        
         content.title = "deneme"
         content.body = "deneme"
-        content.sound = UNNotificationSound.default
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)

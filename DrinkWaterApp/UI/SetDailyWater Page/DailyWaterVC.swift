@@ -82,6 +82,14 @@ extension DailyWaterVC: DailyWaterVMDelegate {
 }
 
 extension DailyWaterVC: DailyWaterCellDelegate {
+    func changeMlButtonTapped() {
+        navigationController?.navigationBar.backgroundColor = .opaqueSeparator
+    }
+    
+    func continueButtonTapped() {
+        navigationController?.navigationBar.backgroundColor = .systemBackground
+    }
+    
     func saveButtonTapped(ml: String) {
         viewModel.addDailyWaterMl(ml: ml)
     }

@@ -26,6 +26,16 @@ class HomeVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView),
                                                name: NSNotification.Name(rawValue: "reloadHomeTableView"),
                                                object: nil)
+        
+        let notificationType = SettingsManager.shared.getSelectedNotificationStyle()
+        
+        switch notificationType {
+        case .on:
+            break
+//            createNotification()
+        case .off:
+            break
+        }
     }
     
     @objc private func reloadTableView() {
